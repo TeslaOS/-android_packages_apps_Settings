@@ -17,7 +17,17 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
     <!-- Tesla Settings screens  -->
-    <string name="pac_settings_title">Tesla Settings</string>
+    <string name="tesla_settings_title">Tesla Settings</string>
+
+    <!-- Color Picker -->
+    <string name="dialog_color_picker">Color Picker</string>
+    <string name="press_color_to_apply">Press on color below to apply</string>
+    <string name="arrow_right">→</string>
+    <string name="arrow_down">↓</string>
+    <string name="hex">Hex:</string>
+    <string name="hex_hint">#ff000000</string>
+    <string name="set">Set</string>
+    <string name="color_default">Default</string>
 
     <string name="tesla_version">Tesla OS version</string>
     <string name="tesla_version_default">Unknown</string>
