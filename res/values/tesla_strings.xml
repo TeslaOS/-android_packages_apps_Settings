@@ -49,6 +49,14 @@
     <string name="position_right_title">Right</string>
     <string name="position_centered_title">Centered</string>
     <string name="hidden_title">Hidden</string>
+    <string name="ok">OK</string>
+    <string name="reset">Reset</string>
+    <string name="add">Add</string>
+    <string name="help">Help</string>
+    <string name="attention">Attention</string>
+    <string name="enabled">Enabled</string>
+    <string name="default_string">Default</string>
+    <string name="choose_app">Choose application</string>
     <string name="reset_message">Reset all entries to default?</string>
 
     <!-- Color Picker -->
