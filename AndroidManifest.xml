@@ -2741,6 +2741,9 @@
                        android:resource="@id/lockscreen_settings" />
         </activity>
 
+        <activity android:name=".tesla.gestureanywhere.GestureAnywhereBuilderActivity" />
+        <activity android:name=".tesla.gestureanywhere.GestureAnywhereCreateGestureActivity" />
+
         <provider
             android:name=".search.SettingsSearchIndexablesProvider"
             android:authorities="com.android.settings"
