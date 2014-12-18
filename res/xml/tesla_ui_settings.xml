@@ -32,4 +32,12 @@
             android:title="@string/traffic_category"
             android:fragment="com.android.settings.tesla.NetworkTraffic"
             />
+
+    <!-- Wakelock blocker -->
+    <PreferenceScreen
+            android:key="wakelock_blocker"
+            android:title="@string/wakelock_blocker_title"
+            android:fragment="com.android.settings.tesla.WakeLockBlocker"
+            />
+
 </PreferenceScreen>
