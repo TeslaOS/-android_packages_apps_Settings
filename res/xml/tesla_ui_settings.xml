@@ -26,5 +26,10 @@
             android:fragment="com.android.settings.tesla.ScreenAndAnimations"
             android:title="@string/screen_and_animations_title"
             />
-
+    <!-- Network Traffic -->
+    <PreferenceScreen
+            android:key="traffic"
+            android:title="@string/traffic_category"
+            android:fragment="com.android.settings.tesla.NetworkTraffic"
+            />
 </PreferenceScreen>
