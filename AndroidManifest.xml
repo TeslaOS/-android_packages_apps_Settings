@@ -2357,5 +2357,12 @@
             </intent-filter>
         </activity>
 
+        <!-- Start of Tesla Activities -->
+
+        <!-- Gesture anywhere -->
+        <activity android:name=".tesla.gestureanywhere.GestureAnywhereBuilderActivity" />
+        <activity android:name=".tesla.gestureanywhere.GestureAnywhereCreateGestureActivity" />
+
+        <!-- End of Tesla Activities -->
     </application>
 </manifest>
