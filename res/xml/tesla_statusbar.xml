@@ -49,4 +49,11 @@
                  android:fragment="com.android.settings.tesla.StatusBarWeather"
                  />
 
+        <!-- Bettery Bar -->
+        <PreferenceScreen
+                 android:key="battery_bar"
+                 android:fragment="com.android.settings.tesla.BatteryBar"
+                 android:title="@string/battery_bar"
+                 />
+
 </PreferenceScreen>
