@@ -524,21 +524,23 @@ public class ActionListViewSettings extends ListFragment implements
             case NAV_RING:
                 return ActionHelper.getNavRingConfigWithDescription(
                     mActivity, mActionValuesKey, mActionEntriesKey);
+*/
             case PIE:
                 return ActionHelper.getPieConfigWithDescription(
                     mActivity, mActionValuesKey, mActionEntriesKey);
             case PIE_SECOND:
                 return ActionHelper.getPieSecondLayerConfigWithDescription(
                     mActivity, mActionValuesKey, mActionEntriesKey);
-            case POWER_MENU_SHORTCUT:
+/*            case POWER_MENU_SHORTCUT:
                 return PolicyHelper.getPowerMenuConfigWithDescription(
                     mActivity, mActionValuesKey, mActionEntriesKey);
             case LOCKSCREEN_SHORTCUT:
                 return ActionHelper.getLockscreenShortcutConfig(mActivity);
             case SHAKE_EVENTS_DISABLED:
                 return ActionHelper.getDisabledShakeApps(mActivity);
-        }
 */
+        }
+
         return null;
     }
 
@@ -551,13 +553,14 @@ public class ActionListViewSettings extends ListFragment implements
             case NAV_RING:
                 ActionHelper.setNavRingConfig(mActivity, actionConfigs, reset);
                 break;
+*/
             case PIE:
                 ActionHelper.setPieConfig(mActivity, actionConfigs, reset);
                 break;
             case PIE_SECOND:
                 ActionHelper.setPieSecondLayerConfig(mActivity, actionConfigs, reset);
                 break;
-            case POWER_MENU_SHORTCUT:
+/*            case POWER_MENU_SHORTCUT:
                 PolicyHelper.setPowerMenuConfig(mActivity, actionConfigs, reset);
                 break;
             case LOCKSCREEN_SHORTCUT:
@@ -566,8 +569,8 @@ public class ActionListViewSettings extends ListFragment implements
             case SHAKE_EVENTS_DISABLED:
                 ActionHelper.setDisabledShakeApps(mActivity, actionConfigs, reset);
                 break;
-        }
 */
+        }
     }
 
     private class ViewHolder {
