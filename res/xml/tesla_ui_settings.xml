@@ -65,4 +65,12 @@
               android:summary="@string/double_tap_sleep_anywhere_summary"
               />
 
+      <!--  carrier label -->
+      <PreferenceScreen
+              android:key="carrier_options"
+              android:fragment="com.android.settings.tesla.fragments.CarrierLabel"
+              android:layout="@layout/preference_carrierlabel"
+              android:title="@string/carrier_options"
+              />
+
 </PreferenceScreen>
