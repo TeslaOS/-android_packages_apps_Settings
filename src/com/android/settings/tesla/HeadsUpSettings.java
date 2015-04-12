@@ -52,7 +52,7 @@ import com.android.settings.Utils;
 import com.android.settings.cyanogenmod.PackageListAdapter;
 import com.android.settings.cyanogenmod.PackageListAdapter.PackageItem;
 import com.android.settings.SettingsActivity;
-import com.android.settings.cyanogenmod.BaseSystemSettingSwitchBar;
+import com.android.settings.tesla.utils.TeslaSwitchBar;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -60,7 +60,7 @@ import java.util.List;
 import java.util.Map;
 
 public class HeadsUpSettings extends SettingsPreferenceFragment
-        implements BaseSystemSettingSwitchBar.SwitchBarChangeCallback,
+        implements TeslaSwitchBar.SwitchBarChangeCallback,
                 AdapterView.OnItemLongClickListener, Preference.OnPreferenceClickListener,
                             OnPreferenceChangeListener {
 
@@ -84,7 +84,7 @@ public class HeadsUpSettings extends SettingsPreferenceFragment
     private Map<String, Package> mDndPackages;
     private Map<String, Package> mBlacklistPackages;
 
-    private BaseSystemSettingSwitchBar mEnabledSwitch;
+    private TeslaSwitchBar mEnabledSwitch;
 
     private ViewGroup mPrefsContainer;
     private View mDisabledText;
@@ -154,7 +154,7 @@ public class HeadsUpSettings extends SettingsPreferenceFragment
     public void onStart() {
         super.onStart();
         final SettingsActivity activity = (SettingsActivity) getActivity();
-        mEnabledSwitch = new BaseSystemSettingSwitchBar(activity, activity.getSwitchBar(),
+        mEnabledSwitch = new TeslaSwitchBar(activity, activity.getSwitchBar(),
                 Settings.TESLA.HEADS_UP_USER_ENABLED, true, this);
     }
 
