@@ -16,7 +16,9 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
-    <!-- Tesla OS Version -->
+    <!-- Tesla Settings screens  -->
+    <string name="pac_settings_title">Tesla Settings</string>
+
     <string name="tesla_version">Tesla OS version</string>
     <string name="tesla_version_default">Unknown</string>
 
