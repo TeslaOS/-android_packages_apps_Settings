@@ -52,7 +52,7 @@ public class NotificationManagerSettings extends SettingsPreferenceFragment
         initLockscreenNotifications();
 
         // Heads-up
-        mHeadsUp = findPreference(Settings.System.HEADS_UP_NOTIFICATION);
+        mHeadsUp = findPreference(Settings.TESLA.HEADS_UP_NOTIFICATION);
     }
 
     // === Lockscreen (public / private) notifications ===
@@ -96,8 +96,8 @@ public class NotificationManagerSettings extends SettingsPreferenceFragment
     public void onResume() {
         super.onResume();
 
-        boolean headsUpEnabled = Settings.System.getInt(
-                getContentResolver(), Settings.System.HEADS_UP_NOTIFICATION, 1) != 0;
+        boolean headsUpEnabled = Settings.TESLA.getInt(
+                getContentResolver(), Settings.TESLA.HEADS_UP_NOTIFICATION, 1) != 0;
         mHeadsUp.setSummary(headsUpEnabled
                 ? R.string.summary_heads_up_enabled : R.string.summary_heads_up_disabled);
     }
