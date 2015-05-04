@@ -323,7 +323,7 @@ public class HeadsUpSettings extends SettingsPreferenceFragment
         if (preference == mHeadsUpTimeOut) {
             int headsUpTimeOut = Integer.valueOf((String) newValue);
             Settings.TESLA.putInt(getContentResolver(),
-                    Settings.HEADS_UP_NOTIFICATION_DECAY,
+                    Settings.TESLA.HEADS_UP_NOTIFICATION_DECAY,
                     headsUpTimeOut);
             updateHeadsUpTimeOutSummary(headsUpTimeOut);
             return true;
