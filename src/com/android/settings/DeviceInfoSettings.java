@@ -113,7 +113,7 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
         findPreference(KEY_BUILD_NUMBER).setEnabled(true);
         findPreference(KEY_KERNEL_VERSION).setSummary(getFormattedKernelVersion());
         setValueSummary(KEY_MOD_BUILD_DATE, "ro.build.date");
-        setValueSummary(KEY_TESLA_VERSION, "ro.tesla.version");
+        setValueSummary(KEY_TESLA_VERSION, "ro.tesla.display.version");
         findPreference(KEY_TESLA_VERSION).setEnabled(true);
 
         if (!SELinux.isSELinuxEnabled()) {
