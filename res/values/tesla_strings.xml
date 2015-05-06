@@ -210,7 +210,10 @@
     <string name="volume_steps_system_title">Volume steps: System</string>
     <!-- Sound settings screen, setting option name -->
     <string name="volume_steps_voice_call_title">Volume steps: Voice Call</string>
-
+    
+    <!-- Animation Control -->
+    <string name="screen_and_animations_title">Animation control</string>
+    
     <!-- Toast animations -->
     <string name="toast_animation_title">Toast animations</string>
     <string name="toast_animation_summary">Select and preview system toast animation</string>
