@@ -277,6 +277,7 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
                     Log.e(LOG_TAG, "Unable to start activity " + intent.toString());
                 }
             }
+        }
         return super.onPreferenceTreeClick(preferenceScreen, preference);
     }
 
