@@ -73,6 +73,7 @@
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="android.permission.HARDWARE_ABSTRACTION_ACCESS" />
     <uses-permission android:name="com.cyanogen.permission.REQUEST_KILL_SWITCH_OP" />
+    <uses-permission android:name="tesla.permission.FINISH_SETUP" />
 
     <permission
         android:name="cyanogenmod.permission.PROTECTED_APP"
@@ -2348,5 +2349,11 @@
         <activity android:name=".tesla.gestureanywhere.GestureAnywhereCreateGestureActivity" />
 
         <!-- End of Tesla Activities -->
+
+        <receiver android:name=".profiles.SetupDefaultProfileReceiver">
+            <intent-filter>
+                <action android:name="com.tesla.setupwizard.SETUP_FINISHED" />
+            </intent-filter>
+        </receiver>
     </application>
 </manifest>
