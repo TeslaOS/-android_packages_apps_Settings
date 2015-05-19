@@ -105,14 +105,14 @@
     <dimen name="actionbar_subsettings_contentInsetStart">72dp</dimen>
 
     <!-- Dashboard margins between each tiles within the layout -->
-    <dimen name="dashboard_cell_gap_x">0dp</dimen>
-    <dimen name="dashboard_cell_gap_y">0dp</dimen>
+    <dimen name="dashboard_cell_gap_x">5.0dip</dimen>
+    <dimen name="dashboard_cell_gap_y">5.0dip</dimen>
 
     <!-- Dashboard padding in its container -->
-    <dimen name="dashboard_padding_start">0dp</dimen>
-    <dimen name="dashboard_padding_end">0dp</dimen>
-    <dimen name="dashboard_padding_top">0dp</dimen>
-    <dimen name="dashboard_padding_bottom">0dp</dimen>
+    <dimen name="dashboard_padding_start">15.0dip</dimen>
+    <dimen name="dashboard_padding_end">15.0dip</dimen>
+    <dimen name="dashboard_padding_top">25.0dip</dimen>
+    <dimen name="dashboard_padding_bottom">25.0dip</dimen>
 
     <!-- Dashboard category padding start / end -->
     <dimen name="dashboard_category_padding_start">0dp</dimen>
@@ -131,7 +131,7 @@
     <dimen name="dashboard_tile_minimum_height">72dp</dimen>
 
     <!-- Dashboard image tile size -->
-    <dimen name="dashboard_tile_image_size">24dp</dimen>
+    <dimen name="dashboard_tile_image_size">17.0dip</dimen>
 
     <!-- Dashboard tile image margin start / end -->
     <dimen name="dashboard_tile_image_margin_start">16dp</dimen>
