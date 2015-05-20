@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2007 The Android Open Source Project
+<!-- 
+     Copyright (C) 2007 The Android Open Source Project
+     Copyright (C) 2015 The Tesla OS
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -37,7 +39,7 @@
     <color name="crypt_keeper_password_background">#70606060</color>
 
     <color name="divider_color">#00000000</color>
-    <color name="title_color">fff5f5f5</color>
+    <color name="title_color">#fff5f5f5</color>
     <color name="setup_divider_color_dark">#33ffffff</color>
     <color name="setup_divider_color_light">#33000000</color>
     <color name="setup_lock_pattern_view_regular_color_dark">#ffbdbdbd</color>
