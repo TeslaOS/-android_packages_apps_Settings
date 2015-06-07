@@ -97,4 +97,19 @@
             android:title="@string/app_circle_bar_title"
             />
 
+    <!-- PIE Controls -->
+    <PreferenceScreen
+            android:key="pie_settings"
+            android:fragment="com.android.settings.tesla.PieControl"
+            android:title="@string/pie_control_title"
+            />
+
+    <!-- Slim Recents  -->
+    <PreferenceScreen
+            android:key="recent_panel"
+            android:title="@string/recent_panel_slim"
+            android:summary="@string/recent_panel_slim_summary"
+            android:fragment="com.android.settings.slim.RecentPanel"
+            />
+
 </PreferenceScreen>
