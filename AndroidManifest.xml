@@ -2325,6 +2325,8 @@
 
         <!-- Start of Tesla Activities -->
 
+        <activity android:name=".tesla.LockScreen" />
+
         <!-- Gesture anywhere -->
         <activity android:name=".tesla.gestureanywhere.GestureAnywhereBuilderActivity" />
         <activity android:name=".tesla.gestureanywhere.GestureAnywhereCreateGestureActivity" />
