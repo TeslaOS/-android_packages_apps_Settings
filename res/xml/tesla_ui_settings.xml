@@ -83,4 +83,11 @@
             android:title="@string/screen_and_animations_title"
             />
 
+    <!-- Allow disabling of FC dialogs -->
+    <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
+            android:key="disable_fc_notifications"
+            android:title="@string/disable_fc_notifications_title"
+            android:summary="@string/disable_fc_notifications_summary"
+            />
+
 </PreferenceScreen>
