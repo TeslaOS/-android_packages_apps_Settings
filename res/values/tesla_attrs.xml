@@ -25,4 +25,7 @@
         <attr name="interval" format="integer" />
     </declare-styleable>
 
+    <!-- Minimum prediction score required to pass a gesture as recognized -->
+    <integer name="min_gesture_prediction_score">2</integer>
+
 </resources>

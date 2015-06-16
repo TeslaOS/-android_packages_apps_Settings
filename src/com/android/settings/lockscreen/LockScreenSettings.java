@@ -95,7 +95,7 @@ public class LockScreenSettings extends SettingsPreferenceFragment
 
     private SwitchPreference mBiometricWeakLiveliness;
     private SwitchPreference mVisiblePattern;
-    private SwitchPreference mVisibleGesture;
+	private SwitchPreference mVisibleGesture;
     private SwitchPreference mVisibleErrorPattern;
     private SwitchPreference mVisibleDots;
     private SwitchPreference mPowerButtonInstantlyLocks;
@@ -104,7 +104,7 @@ public class LockScreenSettings extends SettingsPreferenceFragment
 
     // These switch preferences need special handling since they're not all stored in Settings.
     private static final String SWITCH_PREFERENCE_KEYS[] = { KEY_LOCK_AFTER_TIMEOUT,
-            KEY_LOCK_ENABLED, KEY_VISIBLE_PATTERN, KEY_VISIBLE_GESTURE,  KEY_VISIBLE_ERROR_PATTERN, KEY_VISIBLE_DOTS,
+            KEY_LOCK_ENABLED, KEY_VISIBLE_PATTERN, KEY_VISIBLE_GESTURE, KEY_VISIBLE_ERROR_PATTERN, KEY_VISIBLE_DOTS,
             KEY_BIOMETRIC_WEAK_LIVELINESS, KEY_POWER_INSTANTLY_LOCKS };
 
 
@@ -190,7 +190,8 @@ public class LockScreenSettings extends SettingsPreferenceFragment
         mVisiblePattern = (SwitchPreference) root.findPreference(KEY_VISIBLE_PATTERN);
 
         // visible gesture
-        mVisibleGesture = (SwitchPreference) root.findPreference(KEY_VISIBLE_GESTURE)
+        mVisibleGesture = (SwitchPreference) root.findPreference(KEY_VISIBLE_GESTURE);
+
 
         // visible error pattern
         mVisibleErrorPattern = (SwitchPreference) root.findPreference(KEY_VISIBLE_ERROR_PATTERN);
@@ -217,7 +218,7 @@ public class LockScreenSettings extends SettingsPreferenceFragment
                 mLockPatternUtils.getKeyguardStoredPasswordQuality() !=
                         DevicePolicyManager.PASSWORD_QUALITY_SOMETHING) {
             if (securityCategory != null && mVisiblePattern != null &&
-                   mVisibleErrorPattern != null && mVisibleGesture != null &&  mVisibleDots != null) {
+                   mVisibleErrorPattern != null && mVisibleGesture != null && mVisibleDots != null) {
                 securityCategory.removePreference(mVisiblePattern);
                 securityCategory.removePreference(mVisibleErrorPattern);
                 securityCategory.removePreference(mVisibleGesture);

@@ -552,7 +552,7 @@ public class ChooseLockGeneric extends SettingsActivity {
             } else if (KEY_UNLOCK_SET_PASSWORD.equals(unlockMethod)) {
                 maybeEnableEncryption(
                         DevicePolicyManager.PASSWORD_QUALITY_ALPHABETIC, false);
-            } else if (KEY_UNLOCK_SET_GESTURE.equals(key)) {
+            } else if (KEY_UNLOCK_SET_GESTURE.equals(unlockMethod)) {
                 updateUnlockMethodAndFinish(
                         DevicePolicyManager.PASSWORD_QUALITY_GESTURE_WEAK, false);
             } else {
