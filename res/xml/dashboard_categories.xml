@@ -105,7 +105,7 @@
                 android:id="@+id/tesla_settings"
                 android:title="@string/tesla_settings_title"
                 android:fragment="com.android.settings.tesla.TeslaUiSettings"
-                android:icon="@drawable/ic_power_system"
+                android:icon="@drawable/tesla_settings"
                 />
     </dashboard-category>
 
