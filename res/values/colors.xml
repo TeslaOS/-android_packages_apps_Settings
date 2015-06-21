@@ -83,4 +83,7 @@
     <color name="sim_noitification">@*android:color/material_deep_teal_500</color>
     <color name="regulatory_text_color">#000</color>
 
+    <color name="dashboard_category_background_color">@drawable/dashboard_category_background</color>
+    <color name="dashboard_background_color">@drawable/dashboard_background</color>
+
 </resources>
