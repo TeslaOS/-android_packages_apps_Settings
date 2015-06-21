@@ -102,4 +102,7 @@
     <!-- Accent color that matches the settings launcher icon -->
     <color name="icon_accent">#ffabffec</color>
 
+    <color name="dashboard_category_background_color">@drawable/dashboard_category_background</color>
+    <color name="dashboard_background_color">@drawable/dashboard_background</color>
+
 </resources>
