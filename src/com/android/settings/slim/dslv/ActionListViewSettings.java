@@ -629,7 +629,7 @@ public class ActionListViewSettings extends ListFragment implements
             if (iconUri != null && iconUri.startsWith(ActionConstants.SYSTEM_ICON_IDENTIFIER)) {
                 d.setTint(getResources().getColor(R.color.dslv_icon_dark));
             }
-            holder.iconView.setImageDrawable(d);
+            holder.iconView.setImageBitmap(ImageHelper.drawableToBitmap(d));
 
             if (!mDisableIconPicker && holder.iconView.getDrawable() != null) {
                 holder.iconView.setOnClickListener(new OnClickListener() {
