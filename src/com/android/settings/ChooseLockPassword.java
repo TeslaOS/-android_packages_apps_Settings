@@ -64,6 +64,7 @@ public class ChooseLockPassword extends SettingsActivity {
     }
 
     public static Intent createIntent(Context context, int quality, final boolean isFallback,
+            final boolean isFingerprintFallback,
             int minLength, final int maxLength, boolean requirePasswordToDecrypt,
             boolean confirmCredentials) {
         Intent intent = new Intent().setClass(context, ChooseLockPassword.class);
@@ -72,6 +73,7 @@ public class ChooseLockPassword extends SettingsActivity {
         intent.putExtra(PASSWORD_MAX_KEY, maxLength);
         intent.putExtra(ChooseLockGeneric.CONFIRM_CREDENTIALS, confirmCredentials);
         intent.putExtra(LockPatternUtils.LOCKSCREEN_BIOMETRIC_WEAK_FALLBACK, isFallback);
+        intent.putExtra(LockPatternUtils.LOCKSCREEN_FINGERPRINT_FALLBACK, isFingerprintFallback);
         intent.putExtra(EncryptionInterstitial.EXTRA_REQUIRE_PASSWORD, requirePasswordToDecrypt);
         return intent;
     }
@@ -122,7 +124,7 @@ public class ChooseLockPassword extends SettingsActivity {
         private boolean mIsAlphaMode;
         private Button mCancelButton;
         private Button mNextButton;
-        private static final int CONFIRM_EXISTING_REQUEST = 58;
+        protected static final int CONFIRM_EXISTING_REQUEST = 58;
         static final int RESULT_FINISHED = RESULT_FIRST_USER;
         private static final long ERROR_MESSAGE_TIMEOUT = 3000;
         private static final int MSG_SHOW_ERROR = 1;
@@ -433,12 +435,16 @@ public class ChooseLockPassword extends SettingsActivity {
                 if (mFirstPin.equals(pin)) {
                     final boolean isFallback = getActivity().getIntent().getBooleanExtra(
                             LockPatternUtils.LOCKSCREEN_BIOMETRIC_WEAK_FALLBACK, false);
+                    final boolean isFingerprintFallback = getActivity().getIntent().getBooleanExtra(
+                            LockPatternUtils.LOCKSCREEN_FINGERPRINT_FALLBACK, false);
+
                     boolean wasSecureBefore = mLockPatternUtils.isSecure();
                     mLockPatternUtils.clearLock(isFallback);
                     final boolean required = getActivity().getIntent().getBooleanExtra(
                             EncryptionInterstitial.EXTRA_REQUIRE_PASSWORD, true);
                     mLockPatternUtils.setCredentialRequiredToDecrypt(required);
-                    mLockPatternUtils.saveLockPassword(pin, mRequestedQuality, isFallback);
+                    mLockPatternUtils.saveLockPassword(pin, mRequestedQuality, isFallback,
+                            isFingerprintFallback);
                     getActivity().setResult(RESULT_FINISHED);
                     getActivity().finish();
                     mDone = true;

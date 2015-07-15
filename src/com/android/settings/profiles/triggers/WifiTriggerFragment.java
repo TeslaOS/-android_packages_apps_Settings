@@ -17,8 +17,6 @@ package com.android.settings.profiles.triggers;
 
 import android.app.AlertDialog;
 import android.app.ListFragment;
-import android.app.Profile;
-import android.app.ProfileManager;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -31,10 +29,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
+
+import cyanogenmod.app.Profile;
+import cyanogenmod.app.ProfileManager;
+
 import com.android.settings.R;
 import com.android.settings.profiles.ProfilesSettings;
 
@@ -73,7 +74,7 @@ public class WifiTriggerFragment extends ListFragment {
         } else {
             throw new UnsupportedOperationException("no profile!");
         }
-        mProfileManager = (ProfileManager) getActivity().getSystemService(Context.PROFILE_SERVICE);
+        mProfileManager = ProfileManager.getInstance(getActivity());
         mWifiManager = (WifiManager) getActivity().getSystemService(Context.WIFI_SERVICE);
     }
 
@@ -149,13 +150,13 @@ public class WifiTriggerFragment extends ListFragment {
 
         entries = new String[triggers.size()];
         final int[] valueInts = new int[triggers.size()];
-        int currentTrigger = mProfile.getTrigger(triggerType, triggerId);
+        int currentTriggerState = mProfile.getTriggerState(triggerType, triggerId);
         int currentItem = -1;
         for (int i = 0; i < triggers.size(); i++) {
             Trigger t = triggers.get(i);
             entries[i] = t.name;
             valueInts[i] = t.value;
-            if (valueInts[i] == currentTrigger) {
+            if (valueInts[i] == currentTriggerState) {
                 currentItem = i;
             }
         }
@@ -199,7 +200,8 @@ public class WifiTriggerFragment extends ListFragment {
         if (configs != null) {
             for (WifiConfiguration config : configs) {
                 WifiTrigger accessPoint = new WifiTrigger(config);
-                int state = mProfile.getTrigger(Profile.TriggerType.WIFI, accessPoint.getSSID());
+                int state = mProfile.getTriggerState(
+                        Profile.TriggerType.WIFI, accessPoint.getSSID());
                 initPreference(accessPoint, state, res, R.drawable.ic_wifi_signal_4_teal);
                 mTriggers.add(accessPoint);
             }
