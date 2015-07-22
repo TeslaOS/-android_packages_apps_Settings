@@ -179,4 +179,10 @@
     <string name="dim_nav_buttons_touch_anywhere_summary_on">Touching anywhere on the screen will cause buttons to un-dim</string>
     <string name="dim_nav_buttons_touch_anywhere_summary_off">Only touches on the navbar will cause buttons to un-dim</string>
 
+    <!-- Status bar temperature -->
+    <string name="status_bar_temperature_title">Temperature style</string>
+    <string name="status_bar_temperature_hidden">Hidden</string>
+    <string name="status_bar_temperature_show_scale">Scale showing</string>
+    <string name="status_bar_temperature_hide_scale">Scale hidden</string>
+
 </resources>
