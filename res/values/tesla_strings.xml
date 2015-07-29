@@ -618,5 +618,17 @@
     <!-- ATTENTION: RTL languages need to replace left with right -->
     <string name="recent_panel_lefty_mode_title">Show on the left edge</string>
     <string name="recent_panel_lefty_mode_summary">Show recent apps panel on the left edge</string>
+    
+    <!-- Status bar temperature -->
+    <string name="status_bar_temperature_title">Temperature</string>
+    <string name="status_bar_temperature_hidden">Hidden</string>
+    <string name="status_bar_temperature_show_scale">Shown with scale</string>
+    <string name="status_bar_temperature_hide_scale">Shown without scale</string>
+    <string name="status_bar_temperature_location_title">Placement</string>
+    <string name="status_bar_temperature_location_summary">Select where the weather temperature is shown on the statusbar</string>
+    <string name="status_bar_temperature_location_right">Show on right</string>
+    <string name="status_bar_temperature_location_left">Show on left</string>
+    <string name="status_bar_weather_color_title">Temperature color</string>
+    <string name="status_bar_weather_size_title">Font size</string>
 
 </resources>
