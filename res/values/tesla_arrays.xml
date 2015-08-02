@@ -495,6 +495,7 @@
         <item>@*android:drawable/ic_shortcut_tv</item>
         <item>@*android:drawable/ic_shortcut_twitter</item>
         <item>@*android:drawable/ic_shortcut_unlock</item>
+    </string-array>
 
     <!-- Pie control -->
     <string-array name="icon_color_mode_entries">
@@ -548,7 +549,7 @@
         <item>1</item>
         <item>2</item>
     </string-array>
-   
+
     <!-- Status bar temperature -->
     <string-array name="status_bar_temperature_entries" translatable="false">
         <item>@string/status_bar_temperature_hidden</item>
