@@ -414,9 +414,6 @@
     <string name="weather_colorize_all_icons_title">Colorize all icons</string>
     <string name="weather_colorize_all_icons_summary">Enable to colorize all icons, disable to colorize only the monochrome icons</string>
 
-    <!-- Navigation bar button color -->
-    <string name="navbar_button_tint_title">Navigation button tint</string>
-
     <!-- Circle app bar -->
     <string name="category_app_circle_bar_title">App launcher</string>
     <string name="app_circle_bar_title"><i><b>App circle bar</b></i></string>
