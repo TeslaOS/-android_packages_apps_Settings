@@ -58,4 +58,11 @@
         android:defaultValue="false"/>
       </PreferenceCategory>
 
+      <!--  Double tap to sleep anywhere on the lock screen -->
+      <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
+              android:key="double_tap_sleep_anywhere"
+              android:title="@string/double_tap_sleep_anywhere_title"
+              android:summary="@string/double_tap_sleep_anywhere_summary"
+              />
+
 </PreferenceScreen>
