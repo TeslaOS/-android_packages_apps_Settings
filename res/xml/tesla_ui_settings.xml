@@ -112,4 +112,17 @@
             android:fragment="com.android.settings.slim.RecentPanel"
             />
 
+    <!-- Shake to clear Recent Apps and Notifications  -->
+    <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
+            android:key="shake_to_clean_recents"
+            android:title="@string/shake_clean_recent"
+            android:summary="@string/shake_clean_recent_summary"
+            android:defaultValue="false" />
+
+    <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
+            android:key="shake_to_clean_notifications"
+            android:title="@string/shake_clean_notification"
+            android:summary="@string/shake_clean_notification_summary"
+            android:defaultValue="false" />
+
 </PreferenceScreen>

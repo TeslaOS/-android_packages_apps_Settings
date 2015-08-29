@@ -623,5 +623,10 @@
     <string name="status_bar_temperature_location_left">Show on left</string>
     <string name="status_bar_weather_color_title">Temperature color</string>
     <string name="status_bar_weather_size_title">Font size</string>
-
+    
+    <!-- Shake to clear Recent Apps and Notifications -->
+    <string name="shake_clean_recent">Clean recents</string>
+    <string name="shake_clean_recent_summary">Clean recent task by shake</string>
+    <string name="shake_clean_notification">Clean notifications</string>
+    <string name="shake_clean_notification_summary">Clean notification by shake</string>
 </resources>
