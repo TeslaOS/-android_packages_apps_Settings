@@ -109,13 +109,8 @@ public class LockScreenSettings extends SettingsPreferenceFragment
 
     // These switch preferences need special handling since they're not all stored in Settings.
     private static final String SWITCH_PREFERENCE_KEYS[] = { KEY_LOCK_AFTER_TIMEOUT,
-<<<<<<< HEAD
-            KEY_LOCK_ENABLED, KEY_VISIBLE_PATTERN, KEY_VISIBLE_GESTURE, KEY_VISIBLE_ERROR_PATTERN, KEY_VISIBLE_DOTS,
-            KEY_BIOMETRIC_WEAK_LIVELINESS, KEY_POWER_INSTANTLY_LOCKS };
-=======
             KEY_LOCK_ENABLED, KEY_VISIBLE_PATTERN, KEY_VISIBLE_ERROR_PATTERN, KEY_DIRECTLY_SHOW,
             KEY_VISIBLE_DOTS, KEY_BIOMETRIC_WEAK_LIVELINESS, KEY_POWER_INSTANTLY_LOCKS };
->>>>>>> a02a1d5b881d2df8fe3a5d7c5b3787846fdb3182
 
 
     @Override
