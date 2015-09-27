@@ -27,6 +27,9 @@
   <string name="updater_title">Updates</string>
   <string name="updater_summary">Check for updates and more</string>
 
+    <!-- Animation Control -->
+    <string name="screen_and_animations_title">Animation control</string>
+
     <!-- Toast animations -->
     <string name="toast_animation_title">Toast animations</string>
     <string name="toast_animation_summary">Select and preview system toast animation</string>
@@ -135,5 +138,10 @@
     <!-- Text for forcing expanded notifications -->
     <string name="disable_fc_notifications_title">Diable FC Notifications</string>
     <string name="disable_fc_notifications_summary">This will hide all force close notificaitons</string>
+
+    <!-- Contextual headers -->
+    <string name="contextual_title">Contextual headers</string>
+    <string name="status_bar_custom_header_title">Custom header image</string>
+    <string name="status_bar_custom_header_summary">Enable notification panel header image</string>
 
 </resources>
