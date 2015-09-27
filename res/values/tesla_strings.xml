@@ -250,10 +250,10 @@
     <string name="volume_steps_system_title">Volume steps: System</string>
     <!-- Sound settings screen, setting option name -->
     <string name="volume_steps_voice_call_title">Volume steps: Voice Call</string>
-    
+
     <!-- Animation Control -->
     <string name="screen_and_animations_title">Animation control</string>
-    
+
     <!-- Toast animations -->
     <string name="toast_animation_title">Toast animations</string>
     <string name="toast_animation_summary">Select and preview system toast animation</string>
@@ -299,7 +299,7 @@
     <string name="listview_anticipate_overshoot_interpolator">Anticipate and overshoot</string>
     <string name="listview_bounce_interpolator">Bounce</string>
 
-    <!-- AOKP custom system animations -->  
+    <!-- AOKP custom system animations -->
     <string name="aokp_animation_title">System animations</string>
     <string name="aokp_animation_summary">AOKP custom animation</string>
     <string name="animation_exit_only_title">Enter only animation</string>
@@ -611,7 +611,7 @@
     <!-- ATTENTION: RTL languages need to replace left with right -->
     <string name="recent_panel_lefty_mode_title">Show on the left edge</string>
     <string name="recent_panel_lefty_mode_summary">Show recent apps panel on the left edge</string>
-    
+
     <!-- Status bar temperature -->
     <string name="status_bar_temperature_title">Temperature</string>
     <string name="status_bar_temperature_hidden">Hidden</string>
@@ -623,10 +623,15 @@
     <string name="status_bar_temperature_location_left">Show on left</string>
     <string name="status_bar_weather_color_title">Temperature color</string>
     <string name="status_bar_weather_size_title">Font size</string>
-    
+
     <!-- Shake to clear Recent Apps and Notifications -->
     <string name="shake_clean_recent">Clean recents</string>
     <string name="shake_clean_recent_summary">Clean recent task by shake</string>
     <string name="shake_clean_notification">Clean notifications</string>
     <string name="shake_clean_notification_summary">Clean notification by shake</string>
+
+    <!-- Contextual headers -->
+    <string name="contextual_title">Contextual headers</string>
+    <string name="status_bar_custom_header_title">Custom header image</string>
+    <string name="status_bar_custom_header_summary">Enable notification panel header image</string>
 </resources>
