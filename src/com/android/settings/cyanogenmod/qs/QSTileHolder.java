@@ -171,6 +171,9 @@ public class QSTileHolder {
             case QSConstants.TILE_SCREENRECORD:
                 resourceName = "ic_qs_screenrecord";
                 stringId = R.string.qs_screenrecord_tile;
+            case QSConstants.TILE_BATTERY_SAVER:
+                resourceName = "ic_qs_battery_saver_on";
+                stringId = R.string.qs_tile_battery_saver;
                 break;
 
             // Dynamic tiles
