@@ -85,6 +85,10 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
     private static final String KEY_TESLA_VERSION = "tesla_version";
     private static final String KEY_MOD_BUILD_DATE = "build_date";
     private static final String KEY_MOD_API_LEVEL = "mod_api_level";
+    private static final String KEY_UPDATE_SETTINGS = "update_settings";
+    private static final String KEY_UPDATE_SETTINGS_PACKAGE_NAME = "com.teslaos.ota";
+
+    private PreferenceScreen mUpdateSettings;
 
     static final int TAPS_TO_BE_A_DEVELOPER = 7;
 
@@ -200,6 +204,12 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
             if (pref != null) {
                 getPreferenceScreen().removePreference(pref);
             }
+        }
+
+        // Remove update settings if it is not present.
+        mUpdateSettings = (PreferenceScreen) findPreference(KEY_UPDATE_SETTINGS);
+        if (!Utils.isPackageInstalled(getActivity(), KEY_UPDATE_SETTINGS_PACKAGE_NAME)) {
+          getPreferenceScreen().removePreference(mUpdateSettings);
         }
     }
 

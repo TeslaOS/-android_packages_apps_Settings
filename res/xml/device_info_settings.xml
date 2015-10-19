@@ -32,6 +32,15 @@
                     android:targetClass="@string/additional_system_update_menu" />
         </PreferenceScreen>
 
+         <!-- TeslaOS Update Center -->
+         <PreferenceScreen android:key="update_settings"
+                android:title="@string/updater_title"
+                android:summary="@string/updater_summary">
+            <intent android:action="android.intent.action.MAIN"
+                    android:targetPackage="com.teslaos.ota"
+                    android:targetClass="com.teslaos.center.TeslaOSUpdateCenter" />
+        </PreferenceScreen>
+
         <!-- Device status - launches activity -->
         <PreferenceScreen android:key="status_info"
                 android:title="@string/device_status"
