@@ -647,4 +647,7 @@
     <string name="lockscreen_see_through_summary">Blurs and displays the content behind your lockscreen.</string>
     <string name="lockscreen_blur_radius">Blur effect intensity</string>
 
+    <!-- OTACenter -->
+    <string name="updater_title">Updates</string>
+    <string name="updater_summary">Check for updates and more</string>
 </resources>
