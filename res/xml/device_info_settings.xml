@@ -47,13 +47,13 @@
                     android:targetClass="com.android.settings.deviceinfo.Status" />
         </PreferenceScreen>
 
-        <!-- Contributors cloud -->
+        <!-- TeslaOS Update Center -->
         <PreferenceScreen android:key="update_settings"
             android:title="@string/updater_title"
             android:summary="@string/updater_summary">
             <intent android:action="android.intent.action.MAIN"
               android:targetPackage="com.teslaos.ota"
-              android:targetClass="com.teslaos.center.OTACenter" />
+              android:targetClass="com.teslaos.center.TeslaOSUpdateCenter" />
         </PreferenceScreen>
 
         <!-- Legal Information -->
