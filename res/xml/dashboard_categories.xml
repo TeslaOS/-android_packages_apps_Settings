@@ -72,6 +72,21 @@
 
     </dashboard-category>
 
+
+        <!-- Personalization -->
+        <dashboard-category
+                android:id="@+id/device_personalization"
+                android:title="@string/header_category_personalization" >
+
+            <!-- Tesla Settings -->
+            <dashboard-tile
+                    android:id="@+id/tesla_settings"
+                    android:title="@string/tesla_settings_title"
+                    android:fragment="com.android.settings.tesla.TeslaUiSettings"
+                    android:icon="@drawable/tesla_settings"
+                    />
+        </dashboard-category>
+
     <!-- DEVICE -->
     <dashboard-category
             android:id="@+id/device_section"

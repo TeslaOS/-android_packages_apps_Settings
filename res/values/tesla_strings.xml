@@ -20,8 +20,11 @@
   <string name="tesla_version">TeslaOS version</string>
   <string name="tesla_version_default">Unknown</string>
 
-    <!-- OTACenter -->
-    <string name="updater_title">Updates</string>
-    <string name="updater_summary">Check for updates and more</string>
+  <!-- Tesla Settings screens  -->
+  <string name="tesla_settings_title">Tesla Settings</string>
+
+  <!-- OTACenter -->
+  <string name="updater_title">Updates</string>
+  <string name="updater_summary">Check for updates and more</string>
 
 </resources>
