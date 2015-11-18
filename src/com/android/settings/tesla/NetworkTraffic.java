@@ -84,30 +84,30 @@ public class NetworkTraffic extends SettingsPreferenceFragment
 
         mNetTrafficAutohide =
             (CheckBoxPreference) prefSet.findPreference(NETWORK_TRAFFIC_AUTOHIDE);
-        mNetTrafficAutohide.setChecked((Settings.TESLA.getInt(getContentResolver(),
-                Settings.TESLA.NETWORK_TRAFFIC_AUTOHIDE, 0) == 1));
+        mNetTrafficAutohide.setChecked((Settings.System.getInt(getContentResolver(),
+                Settings.System.NETWORK_TRAFFIC_AUTOHIDE, 0) == 1));
         mNetTrafficAutohide.setOnPreferenceChangeListener(this);
 
         mNetTrafficAutohideThreshold =
             (SeekBarPreferenceCham) prefSet.findPreference(NETWORK_TRAFFIC_AUTOHIDE_THRESHOLD);
-        int netTrafficAutohideThreshold = Settings.TESLA.getInt(getContentResolver(),
-                Settings.TESLA.NETWORK_TRAFFIC_AUTOHIDE_THRESHOLD, 10);
+        int netTrafficAutohideThreshold = Settings.System.getInt(getContentResolver(),
+                Settings.System.NETWORK_TRAFFIC_AUTOHIDE_THRESHOLD, 10);
             mNetTrafficAutohideThreshold.setValue(netTrafficAutohideThreshold / 1);
             mNetTrafficAutohideThreshold.setOnPreferenceChangeListener(this);
 
         mNetTrafficColor =
             (ColorPickerPreference) prefSet.findPreference(NETWORK_TRAFFIC_COLOR);
         mNetTrafficColor.setOnPreferenceChangeListener(this);
-        int intColor = Settings.TESLA.getInt(getContentResolver(),
-                Settings.TESLA.NETWORK_TRAFFIC_COLOR, 0xffffffff);
+        int intColor = Settings.System.getInt(getContentResolver(),
+                Settings.System.NETWORK_TRAFFIC_COLOR, 0xffffffff);
         String hexColor = String.format("#%08x", (0xffffffff & intColor));
             mNetTrafficColor.setSummary(hexColor);
             mNetTrafficColor.setNewPreviewColor(intColor);
 
         if (TrafficStats.getTotalTxBytes() != TrafficStats.UNSUPPORTED &&
                 TrafficStats.getTotalRxBytes() != TrafficStats.UNSUPPORTED) {
-            mNetTrafficVal = Settings.TESLA.getInt(getContentResolver(),
-                    Settings.TESLA.NETWORK_TRAFFIC_STATE, 0);
+            mNetTrafficVal = Settings.System.getInt(getContentResolver(),
+                    Settings.System.NETWORK_TRAFFIC_STATE, 0);
             int intIndex = mNetTrafficVal & (MASK_UP + MASK_DOWN);
             intIndex = mNetTrafficState.findIndexOfValue(String.valueOf(intIndex));
             updateNetworkTrafficState(intIndex);
@@ -176,8 +176,8 @@ public class NetworkTraffic extends SettingsPreferenceFragment
     }
 
     private void NetworkTrafficColorReset() {
-        Settings.TESLA.putInt(getContentResolver(),
-                Settings.TESLA.NETWORK_TRAFFIC_COLOR, DEFAULT_TRAFFIC_COLOR);
+        Settings.System.putInt(getContentResolver(),
+                Settings.System.NETWORK_TRAFFIC_COLOR, DEFAULT_TRAFFIC_COLOR);
 
         mNetTrafficColor.setNewPreviewColor(DEFAULT_TRAFFIC_COLOR);
         String hexColor = String.format("#%08x", (0xffffffff & DEFAULT_TRAFFIC_COLOR));
@@ -189,8 +189,8 @@ public class NetworkTraffic extends SettingsPreferenceFragment
             int intState = Integer.valueOf((String)newValue);
             mNetTrafficVal = setBit(mNetTrafficVal, MASK_UP, getBit(intState, MASK_UP));
             mNetTrafficVal = setBit(mNetTrafficVal, MASK_DOWN, getBit(intState, MASK_DOWN));
-            Settings.TESLA.putInt(getActivity().getContentResolver(),
-                    Settings.TESLA.NETWORK_TRAFFIC_STATE, mNetTrafficVal);
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.NETWORK_TRAFFIC_STATE, mNetTrafficVal);
             int index = mNetTrafficState.findIndexOfValue((String) newValue);
             mNetTrafficState.setSummary(mNetTrafficState.getEntries()[index]);
             updateNetworkTrafficState(index);
@@ -200,33 +200,33 @@ public class NetworkTraffic extends SettingsPreferenceFragment
                     Integer.valueOf(String.valueOf(newValue)));
             preference.setSummary(hex);
             int intHex = ColorPickerPreference.convertToColorInt(hex);
-            Settings.TESLA.putInt(getContentResolver(),
-                    Settings.TESLA.NETWORK_TRAFFIC_COLOR, intHex);
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.NETWORK_TRAFFIC_COLOR, intHex);
             return true;
         } else if (preference == mNetTrafficUnit) {
             mNetTrafficVal = setBit(mNetTrafficVal, MASK_UNIT, ((String)newValue).equals("1"));
-            Settings.TESLA.putInt(getActivity().getContentResolver(),
-                    Settings.TESLA.NETWORK_TRAFFIC_STATE, mNetTrafficVal);
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.NETWORK_TRAFFIC_STATE, mNetTrafficVal);
             int index = mNetTrafficUnit.findIndexOfValue((String) newValue);
             mNetTrafficUnit.setSummary(mNetTrafficUnit.getEntries()[index]);
             return true;
         } else if (preference == mNetTrafficPeriod) {
             int intState = Integer.valueOf((String)newValue);
             mNetTrafficVal = setBit(mNetTrafficVal, MASK_PERIOD, false) + (intState << 16);
-            Settings.TESLA.putInt(getActivity().getContentResolver(),
-                    Settings.TESLA.NETWORK_TRAFFIC_STATE, mNetTrafficVal);
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.NETWORK_TRAFFIC_STATE, mNetTrafficVal);
             int index = mNetTrafficPeriod.findIndexOfValue((String) newValue);
             mNetTrafficPeriod.setSummary(mNetTrafficPeriod.getEntries()[index]);
             return true;
         } else if (preference == mNetTrafficAutohide) {
             boolean value = (Boolean) newValue;
-            Settings.TESLA.putInt(getActivity().getContentResolver(),
-                    Settings.TESLA.NETWORK_TRAFFIC_AUTOHIDE, value ? 1 : 0);
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.NETWORK_TRAFFIC_AUTOHIDE, value ? 1 : 0);
             return true;
         } else if (preference == mNetTrafficAutohideThreshold) {
             int threshold = (Integer) newValue;
-            Settings.TESLA.putInt(getActivity().getContentResolver(),
-                    Settings.TESLA.NETWORK_TRAFFIC_AUTOHIDE_THRESHOLD, threshold * 1);
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.NETWORK_TRAFFIC_AUTOHIDE_THRESHOLD, threshold * 1);
             return true;
         }
         return false;
