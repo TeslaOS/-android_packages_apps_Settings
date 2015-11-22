@@ -30,6 +30,8 @@ import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.tesla.AnimBarPreference;
 import com.android.settings.R;
 
+import com.android.internal.logging.MetricsLogger;
+
 import com.android.internal.util.tesla.AwesomeAnimationHelper;
 
 import java.util.Arrays;
@@ -155,6 +157,11 @@ public class AnimationControls extends SettingsPreferenceFragment implements OnP
         mAnimationDuration.setInitValue((int) (defaultDuration));
         mAnimationDuration.setOnPreferenceChangeListener(this);
     }
+
+    @Override
+    protected int getMetricsCategory() {
+       return MetricsLogger.DONT_TRACK_ME_BRO;
+   }
 
     @Override
     public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {

@@ -94,17 +94,18 @@
         <item>@string/listview_overshoot_interpolator</item>
         <item>@string/listview_anticipate_overshoot_interpolator</item>
         <item>@string/listview_bounce_interpolator</item>
+    </string-array>
 
-        <string-array name="listview_interpolator_values">
-            <item>0</item>
-            <item>1</item>
-            <item>2</item>
-            <item>3</item>
-            <item>4</item>
-            <item>5</item>
-            <item>6</item>
-            <item>7</item>
-        </string-array>
+    <string-array name="listview_interpolator_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+    </string-array>
 
     <!-- Network Traffic Display States -->
     <string-array name="show_network_traffic_state_entries" translatable="false">
@@ -145,6 +146,21 @@
         <item>1000</item>
         <item>1500</item>
         <item>2000</item>
+    </string-array>
+
+    <!-- Carrier Label -->
+    <string-array name="carrier_label_entries">
+        <item>@string/show_carrier_disabled</item>
+        <item>@string/show_carrier_keyguard</item>
+        <item>@string/show_carrier_statusbar</item>
+        <item>@string/show_carrier_enabled</item>
+    </string-array>
+
+    <string-array name="carrier_label_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
     </string-array>
 
 </resources>

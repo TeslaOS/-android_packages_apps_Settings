@@ -27,6 +27,8 @@ import android.widget.SeekBar.OnSeekBarChangeListener;
 import android.widget.TextView;
 import com.android.settings.R;
 
+import com.android.internal.logging.MetricsLogger;
+
 public class AnimBarPreference extends Preference
         implements OnSeekBarChangeListener {
 

@@ -25,12 +25,12 @@ import android.content.res.Resources;
 import android.database.ContentObserver;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.UserHandle;
 import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.Preference.OnPreferenceChangeListener;
 import android.preference.PreferenceCategory;
 import android.preference.PreferenceScreen;
-import android.preference.SwitchPreference;
 import android.provider.Settings;
 import android.telephony.TelephonyManager;
 import android.text.Spannable;
@@ -39,24 +39,26 @@ import android.provider.Settings.SettingNotFoundException;
 import android.util.Log;
 import android.widget.EditText;
 
+import com.android.internal.logging.MetricsLogger;
+
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
-import com.android.internal.util.slim.DeviceUtils;
+import com.android.settings.Utils;
 import net.margaritov.preference.colorpicker.ColorPickerPreference;
 
 public class CarrierLabel extends SettingsPreferenceFragment implements OnPreferenceChangeListener {
 
     private static final String TAG = "CarrierLabel";
 
-    private static final String STATUS_BAR_CARRIER = "status_bar_carrier";
+    private static final String SHOW_CARRIER_LABEL = "status_bar_show_carrier";
     private static final String CUSTOM_CARRIER_LABEL = "custom_carrier_label";
     private static final String STATUS_BAR_CARRIER_COLOR = "status_bar_carrier_color";
 
     static final int DEFAULT_STATUS_CARRIER_COLOR = 0xffffffff;
 
-    private SwitchPreference mStatusBarCarrier;
     private PreferenceScreen mCustomCarrierLabel;
 
+    private ListPreference mShowCarrierLabel;
     private String mCustomCarrierLabelText;
     private ColorPickerPreference mCarrierColorPicker;
 
@@ -72,9 +74,17 @@ public class CarrierLabel extends SettingsPreferenceFragment implements OnPrefer
         int intColor;
         String hexColor;
 
-        mStatusBarCarrier = (SwitchPreference) prefSet.findPreference(STATUS_BAR_CARRIER);
-        mStatusBarCarrier.setChecked((Settings.System.getInt(resolver, Settings.System.STATUS_BAR_CARRIER, 0) == 1));
-        mStatusBarCarrier.setOnPreferenceChangeListener(this);
+        mShowCarrierLabel =
+                (ListPreference) findPreference(SHOW_CARRIER_LABEL);
+        int showCarrierLabel = Settings.System.getIntForUser(resolver,
+                Settings.System.STATUS_BAR_SHOW_CARRIER, 1, UserHandle.USER_CURRENT);
+        mShowCarrierLabel.setValue(String.valueOf(showCarrierLabel));
+        mShowCarrierLabel.setSummary(mShowCarrierLabel.getEntry());
+        mShowCarrierLabel.setOnPreferenceChangeListener(this);
+
+        if (!Utils.isVoiceCapable(getActivity())) {
+            prefSet.removePreference(mShowCarrierLabel);
+        }
         mCustomCarrierLabel = (PreferenceScreen) prefSet.findPreference(CUSTOM_CARRIER_LABEL);
 
         mCarrierColorPicker = (ColorPickerPreference) findPreference(STATUS_BAR_CARRIER_COLOR);
@@ -86,12 +96,16 @@ public class CarrierLabel extends SettingsPreferenceFragment implements OnPrefer
         mCarrierColorPicker.setNewPreviewColor(intColor);
 
         if (TelephonyManager.getDefault().isMultiSimEnabled()) {
-            prefSet.removePreference(mStatusBarCarrier);
             prefSet.removePreference(mCustomCarrierLabel);
         } else {
             updateCustomLabelTextSummary();
         }
 
+    }
+
+    @Override
+    protected int getMetricsCategory() {
+        return MetricsLogger.DONT_TRACK_ME_BRO;
     }
 
     private void updateCustomLabelTextSummary() {
@@ -115,9 +129,12 @@ public class CarrierLabel extends SettingsPreferenceFragment implements OnPrefer
             Settings.System.putInt(getActivity().getApplicationContext().getContentResolver(),
                     Settings.System.STATUS_BAR_CARRIER_COLOR, intHex);
             return true;
-        } else if (preference == mStatusBarCarrier) {
-            boolean value = (Boolean) newValue;
-            Settings.System.putInt(resolver, Settings.System.STATUS_BAR_CARRIER, value ? 1 : 0);
+         } else if (preference == mShowCarrierLabel) {
+            int showCarrierLabel = Integer.valueOf((String) newValue);
+            int index = mShowCarrierLabel.findIndexOfValue((String) newValue);
+            Settings.System.putIntForUser(resolver, Settings.System.
+                STATUS_BAR_SHOW_CARRIER, showCarrierLabel, UserHandle.USER_CURRENT);
+            mShowCarrierLabel.setSummary(mShowCarrierLabel.getEntries()[index]);
             return true;
          }
          return false;

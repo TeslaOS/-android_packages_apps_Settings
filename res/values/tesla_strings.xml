@@ -22,6 +22,7 @@
 
   <!-- Tesla Settings screens  -->
   <string name="tesla_settings_title">Tesla Settings</string>
+  <string name="header_category_personalization">Personalization</string>
 
   <!-- OTACenter -->
   <string name="updater_title">Updates</string>
@@ -148,13 +149,16 @@
     <string name="double_tap_sleep_anywhere_title">DT2S on Lockscreen</string>
     <string name="double_tap_sleep_anywhere_summary">Double tap lockscreen to put the device to sleep</string>
 
-    <!-- Show carrier label and custom -->
+    <!-- Carrier Label -->
     <string name="carrier_options">Carrier Label</string>
-    <string name="show_status_bar_carrier_title">Status bar carrier</string>
-    <string name="show_status_bar_carrier_summary">Show carrier in status bar</string>
     <string name="custom_carrier_label_title">Custom carrier label</string>
     <string name="custom_carrier_label_explain">Please enter a new label. Leave blank to revert to stock label.</string>
     <string name="custom_carrier_label_notset">Custom label currently not set</string>
     <string name="status_bar_carrier_color">Carrier label color</string>
+    <string name="show_carrier_title">Carrier label</string>
+    <string name="show_carrier_disabled">Disabled</string>
+    <string name="show_carrier_keyguard">Keyguard carrier</string>
+    <string name="show_carrier_statusbar">Status bar carrier</string>
+    <string name="show_carrier_enabled">Enabled</string>
 
 </resources>

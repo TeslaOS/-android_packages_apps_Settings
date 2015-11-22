@@ -9,11 +9,13 @@ import android.preference.Preference.OnPreferenceChangeListener;
 import android.provider.Settings;
 import android.widget.Toast;
 
+import com.android.internal.logging.MetricsLogger;
+
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.R;
 
 public class ScreenAndAnimations extends SettingsPreferenceFragment implements
-        Preference.OnPreferenceChangeListener {
+        OnPreferenceChangeListener {
 
     private static final String TAG = "ScreenAndAnimations";
 
@@ -61,6 +63,11 @@ public class ScreenAndAnimations extends SettingsPreferenceFragment implements
         mListViewInterpolator.setOnPreferenceChangeListener(this);
         mListViewInterpolator.setEnabled(listviewanimation > 0);
     }
+
+    @Override
+    protected int getMetricsCategory() {
+       return MetricsLogger.DONT_TRACK_ME_BRO;
+   }
 
     @Override
     public void onResume() {

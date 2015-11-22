@@ -39,7 +39,7 @@ public class TeslaListPreference extends ListPreference {
                 return true;
             }
 
-            Settings.TESLA.putString(getContext().getContentResolver(), getKey(), value);
+            Settings.System.putString(getContext().getContentResolver(), getKey(), value);
 
             return true;
         }
@@ -52,11 +52,11 @@ public class TeslaListPreference extends ListPreference {
             return defaultReturnValue;
         }
 
-        return Settings.TESLA.getString(getContext().getContentResolver(), getKey());
+        return Settings.System.getString(getContext().getContentResolver(), getKey());
     }
 
     @Override
     protected boolean isPersisted() {
-        return Settings.TESLA.getString(getContext().getContentResolver(), getKey()) != null;
+        return Settings.System.getString(getContext().getContentResolver(), getKey()) != null;
     }
 }

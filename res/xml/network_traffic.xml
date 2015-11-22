@@ -55,7 +55,7 @@
         android:dependency="network_traffic_state"
         android:defaultValue="false" />
 
-    <com.android.settings.pac.utils.SeekBarPreferenceCham
+    <com.android.settings.tesla.utils.SeekBarPreferenceCham
         android:key="network_traffic_autohide_threshold"
         android:title="@string/network_traffic_autohide_threshold"
         android:max="100"

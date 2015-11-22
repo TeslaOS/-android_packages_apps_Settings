@@ -38,10 +38,12 @@ import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.tesla.utils.SeekBarPreferenceCham;
 
+import com.android.internal.logging.MetricsLogger;
+
 import net.margaritov.preference.colorpicker.ColorPickerPreference;
 
 public class NetworkTraffic extends SettingsPreferenceFragment
-    implements OnPreferenceChangeListener {
+    implements Preference.OnPreferenceChangeListener {
 
     private static final String TAG = "NetworkTraffic";
 
@@ -127,6 +129,11 @@ public class NetworkTraffic extends SettingsPreferenceFragment
             mNetTrafficPeriod.setOnPreferenceChangeListener(this);
         }
     }
+
+    @Override
+    protected int getMetricsCategory() {
+       return MetricsLogger.DONT_TRACK_ME_BRO;
+   }
 
     private void updateNetworkTrafficState(int mIndex) {
         if (mIndex <= 0) {

@@ -27,6 +27,8 @@ import android.preference.PreferenceScreen;
 import android.provider.Settings;
 import android.util.Log;
 
+import com.android.internal.logging.MetricsLogger;
+
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 
@@ -42,6 +44,11 @@ public class TeslaUiSettings extends SettingsPreferenceFragment implements
         addPreferencesFromResource(R.xml.tesla_ui_settings);
 
     }
+
+    @Override
+    protected int getMetricsCategory() {
+       return MetricsLogger.DONT_TRACK_ME_BRO;
+   }
 
     @Override
     public void onResume() {
