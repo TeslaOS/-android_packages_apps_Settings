@@ -71,6 +71,7 @@ import java.util.ArrayList;
 import java.util.List;
 import com.android.settings.Utils;
 import com.android.settings.cyanogenmod.DisplayRotation;
+import cyanogenmod.providers.CMSettings;
 
 public class DisplaySettings extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener, OnPreferenceClickListener, Indexable {
@@ -222,10 +223,10 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
         }
 
         boolean proximityCheckOnWait = getResources().getBoolean(
-                com.android.internal.R.bool.config_proximityCheckOnWake);
+                org.cyanogenmod.platform.internal.R.bool.config_proximityCheckOnWake);
         if (!proximityCheckOnWait) {
             removePreference(KEY_PROXIMITY_WAKE);
-            Settings.System.putInt(getContentResolver(), Settings.System.PROXIMITY_ON_WAKE, 1);
+            CMSettings.System.putInt(getContentResolver(), CMSettings.System.PROXIMITY_ON_WAKE, 1);
         }
 
         mWakeWhenPluggedOrUnplugged =
@@ -396,8 +397,8 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
         boolean wakeUpWhenPluggedOrUnpluggedConfig = getResources().getBoolean(
                 com.android.internal.R.bool.config_unplugTurnsOnScreen);
 
-        mWakeWhenPluggedOrUnplugged.setChecked(Settings.Global.getInt(getContentResolver(),
-                Settings.Global.WAKE_WHEN_PLUGGED_OR_UNPLUGGED,
+        mWakeWhenPluggedOrUnplugged.setChecked(CMSettings.Global.getInt(getContentResolver(),
+                CMSettings.Global.WAKE_WHEN_PLUGGED_OR_UNPLUGGED,
                 (wakeUpWhenPluggedOrUnpluggedConfig ? 1 : 0)) == 1);
 
         updateState();
@@ -506,8 +507,8 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     @Override
     public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
         if (preference == mWakeWhenPluggedOrUnplugged) {
-            Settings.Global.putInt(getContentResolver(),
-                    Settings.Global.WAKE_WHEN_PLUGGED_OR_UNPLUGGED,
+            CMSettings.Global.putInt(getContentResolver(),
+                    CMSettings.Global.WAKE_WHEN_PLUGGED_OR_UNPLUGGED,
                     mWakeWhenPluggedOrUnplugged.isChecked() ? 1 : 0);
             return true;
         }
@@ -624,7 +625,7 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
                         result.add(KEY_TAP_TO_WAKE);
                     }
                     if (!context.getResources().getBoolean(
-                            com.android.internal.R.bool.config_proximityCheckOnWake)) {
+                            org.cyanogenmod.platform.internal.R.bool.config_proximityCheckOnWake)) {
                         result.add(KEY_PROXIMITY_WAKE);
                     }
                     if (!isCameraGestureAvailable(context.getResources())) {

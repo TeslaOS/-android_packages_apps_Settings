@@ -37,8 +37,8 @@
     <color name="crypt_keeper_clock_am_pm">#ff9a9a9a</color>
     <color name="crypt_keeper_password_background">#70606060</color>
 
-    <color name="divider_color">#20ffffff</color>
-    <color name="title_color">@android:color/holo_blue_light</color>
+    <color name="divider_color">#00000000</color>
+    <color name="title_color">#fff5f5f5</color>
     <color name="setup_divider_color_dark">#33ffffff</color>
     <color name="setup_divider_color_light">#33000000</color>
     <color name="setup_lock_pattern_view_regular_color_dark">#ffbdbdbd</color>
@@ -68,14 +68,19 @@
     <color name="fingerprint_progress_ring_bg">#20000000</color>
     <color name="fingerprint_indicator_background_resting">#12000000</color>
 
-    <color name="running_processes_system_ram">#ff384248</color>
-    <color name="running_processes_apps_ram">#ff009587</color>
-    <color name="running_processes_free_ram">#ffced7db</color>
+    <color name="running_processes_system_ram">#ffee2f2f</color>
+    <color name="running_processes_apps_ram">#ffbe2626</color>
+    <color name="running_processes_free_ram">#ff282828</color>
+
+    <!-- Palette colors referenced by top-level themes. -->
+    <color name="theme_primary">#ff272727</color>
+    <color name="theme_primary_dark">#ff202020</color>
+    <color name="theme_accent">#ff909090</color>
 
     <color name="card_background">#ffffffff</color>
 
     <color name="switchbar_background_color">#ff37474f</color>
-    <color name="switch_accent_color">#ff7fcac3</color>
+    <color name="switch_accent_color">#fff5f5f5</color>
 
     <color name="wifi_divider">#ffe0e0e0</color>
     <color name="sim_noitification">@*android:color/material_deep_teal_500</color>
@@ -102,7 +107,7 @@
     <!-- Accent color that matches the settings launcher icon -->
     <color name="icon_accent">#ffabffec</color>
 
-    <color name="dashboard_category_background_color">@drawable/dashboard_category_background</color>
-    <color name="dashboard_background_color">@drawable/dashboard_background</color>
+    <color name="dashboard_background_color">#ffe5e5e5</color>
+    <color name="switchbar_background_color">#ff404040</color>
 
 </resources>

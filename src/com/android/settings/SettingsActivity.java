@@ -79,6 +79,7 @@ import com.android.settings.applications.ProcessStatsSummary;
 import com.android.settings.applications.ProcessStatsUi;
 import com.android.settings.applications.UsageAccessDetails;
 import com.android.settings.applications.WriteSettingsDetails;
+import com.android.settings.blacklist.BlacklistSettings;
 import com.android.settings.bluetooth.BluetoothSettings;
 import com.android.settings.dashboard.DashboardCategory;
 import com.android.settings.dashboard.DashboardSummary;
@@ -93,6 +94,7 @@ import com.android.settings.fuelgauge.PowerUsageDetail;
 import com.android.settings.fuelgauge.PowerUsageSummary;
 import com.android.settings.livedisplay.LiveDisplay;
 import com.android.settings.notification.OtherSoundSettings;
+import com.android.settings.tesla.TeslaUiSettings;
 import com.android.settings.profiles.NFCProfileTagCallback;
 import com.android.settings.search.DynamicIndexableContentMonitor;
 import com.android.settings.search.Index;
@@ -267,6 +269,8 @@ public class SettingsActivity extends Activity
             R.id.data_usage_settings,
             R.id.sim_settings,
             R.id.wireless_settings,
+            R.id.device_personalization,
+            R.id.tesla_settings,
             R.id.device_section,
             R.id.notification_settings,
             R.id.display_settings,
@@ -363,7 +367,8 @@ public class SettingsActivity extends Activity
             DrawOverlayDetails.class.getName(),
             WriteSettingsDetails.class.getName(),
             LiveDisplay.class.getName(),
-            com.android.settings.cyanogenmod.PrivacySettings.class.getName()
+            com.android.settings.cyanogenmod.PrivacySettings.class.getName(),
+            BlacklistSettings.class.getName()
     };
 
 

@@ -86,7 +86,14 @@
          layouts against a remote context using our local theme colors. Due to the implementation
          details of Theme, we can't reference any local resources and MUST instead use the values
          directly. So use #ff263238 instead of @color/theme_primary and so on. -->
-    <style name="Theme.SettingsBase" parent="@android:style/Theme.Material.Settings" />
+         <style name="Theme.SettingsBase" parent="@android:style/Theme.Material.Settings">
+     		<item name="android:colorPrimary">#ff272727</item>
+             <item name="android:colorAccent">#ff909090</item>
+             <item name="android:colorPrimaryDark">#ff202020</item>
+     	    <item name="android:navigationBarColor">#ff272727</item>
+     		<item name="android:colorControlNormal">#ff303030</item>
+     		<item name="android:actionBarStyle">@style/Theme.ActionBar</item>
+     	</style>
 
     <style name="Theme.Settings" parent="Theme.SettingsBase">
         <item name="@*android:preferenceStyle">@style/Preference</item>
@@ -135,6 +142,7 @@
 
     <style name="Theme.ActionBar" parent="@android:style/Widget.Material.ActionBar.Solid">
         <item name="android:contentInsetStart">@dimen/actionbar_contentInsetStart</item>
+        <item name="android:colorPrimary">@color/theme_primary</item>
     </style>
 
     <style name="Theme.ActionBar.SubSettings" parent="Theme.ActionBar">
