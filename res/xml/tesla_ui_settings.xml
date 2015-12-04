@@ -144,4 +144,16 @@
 
         </PreferenceCategory>
 
+        <!-- Gesture anywhere -->
+        <PreferenceScreen
+             android:key="gesture_anywhere"
+             android:fragment="com.android.settings.tesla.gestureanywhere.GestureAnywhereSettings"
+             android:title="@string/gesture_anywhere_title" />
+
+        <!-- Lockscreen shortcuts -->
+        <PreferenceScreen
+             android:key="lockscreen_tesla"
+             android:fragment="com.android.settings.tesla.LockScreenSettings"
+             android:title="@string/tesla_lockscreen_title" />
+
 </PreferenceScreen>
