@@ -156,4 +156,10 @@
              android:fragment="com.android.settings.tesla.LockScreenSettings"
              android:title="@string/tesla_lockscreen_title" />
 
+             <!-- Pie Control -->
+             <PreferenceScreen
+                  android:key="pa_pie_control"
+                  android:title="@string/pa_pie_control_title"
+                  android:fragment="com.android.settings.tesla.PieControl" />
+
 </PreferenceScreen>
