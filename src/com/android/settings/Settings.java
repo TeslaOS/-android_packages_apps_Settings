@@ -119,5 +119,11 @@ public class Settings extends SettingsActivity {
     public static class AppDrawOverlaySettingsActivity extends SettingsActivity { /* empty */ }
     public static class AppWriteSettingsActivity extends SettingsActivity { /* empty */ }
     public static class LiveDisplayActivity extends SettingsActivity { /* empty */ }
+    public static class DisplayRotationActivity extends SettingsActivity { /* empty */ }
     public static class BlacklistSettingsActivity extends SettingsActivity { /* empty */ }
+    public static class ProfilesSettingsActivity extends SettingsActivity { /* empty */ }
+    public static class AnonymousStatsActivity extends Settings { /* empty */ }
+    public static class ContributorsCloudActivity extends SettingsActivity { /* empty */ }
+    public static class SoundSettingsActivity extends SettingsActivity { /* empty */ }
+    public static class LockScreenSettingsActivity extends SettingsActivity { /* empty */ }
 }

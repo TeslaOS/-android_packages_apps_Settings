@@ -463,6 +463,8 @@ public class PowerUsageSummary extends PowerUsageBase
             return;
         }
         mPerfProfilePref.setValue(String.valueOf(mPerf.getPowerProfile()));
+        mPerAppProfiles.setEnabled(
+            mPerf.getProfileHasAppProfiles(mPerf.getPowerProfile()));
         updatePerformanceSummary();
     }
 
@@ -515,7 +517,11 @@ public class PowerUsageSummary extends PowerUsageBase
                     if (percentOfTotal < 10) {
                         continue;
                     }
+<<<<<<< HEAD
                     if ("user".equals(Build.TYPE) || "userdebug".equals(Build.TYPE) || "eng".equals(Build.TYPE)) {
+=======
+                    if ("user".equals(Build.TYPE) || "userdebug".equals(Build.TYPE)) {
+>>>>>>> abe4aff41352fb2ce92247178ae03a5fc8e2a9bc
                         continue;
                     }
                 }
@@ -528,7 +534,11 @@ public class PowerUsageSummary extends PowerUsageBase
                     if (percentOfTotal < 5) {
                         continue;
                     }
+<<<<<<< HEAD
                     if ("user".equals(Build.TYPE) || "userdebug".equals(Build.TYPE) || "eng".equals(Build.TYPE)) {
+=======
+                    if ("user".equals(Build.TYPE) || "userdebug".equals(Build.TYPE)) {
+>>>>>>> abe4aff41352fb2ce92247178ae03a5fc8e2a9bc
                         continue;
                     }
                 }
