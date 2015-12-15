@@ -343,19 +343,12 @@ public class ApnSettings extends SettingsPreferenceFragment implements
     @Override
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
         if (!mUnavailable) {
-<<<<<<< HEAD
-            menu.add(0, MENU_NEW, 0,
-                    getResources().getString(R.string.menu_new))
-                    .setIcon(R.drawable.ic_menu_add_white)
-                    .setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM);
-=======
             if (mAllowAddingApns) {
                 menu.add(0, MENU_NEW, 0,
                         getResources().getString(R.string.menu_new))
-                        .setIcon(android.R.drawable.ic_menu_add)
+                        .setIcon(R.drawable.ic_menu_add_white)
                         .setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM);
             }
->>>>>>> abe4aff41352fb2ce92247178ae03a5fc8e2a9bc
             menu.add(0, MENU_RESTORE, 0,
                     getResources().getString(R.string.menu_restore))
                     .setIcon(android.R.drawable.ic_menu_upload);

@@ -21,10 +21,9 @@
         <PreferenceScreen android:key="system_update_settings"
                 android:title="@string/system_update_settings_list_item_title"
                 android:summary="@string/system_update_settings_list_item_summary">
-            <intent android:action="android.settings.SYSTEM_UPDATE_SETTINGS"
-                    android:targetPackage="com.cyngn.fota"
-                    android:targetClass="com.cyngn.fota.SystemUpdateActivity" />
+            <intent android:action="android.settings.SYSTEM_UPDATE_SETTINGS" />
         </PreferenceScreen>
+
 
         <PreferenceScreen android:key="additional_system_update_settings"
                           android:title="@string/additional_system_update_settings_list_item_title">
@@ -33,7 +32,6 @@
                     android:targetClass="@string/additional_system_update_menu" />
         </PreferenceScreen>
 
-<<<<<<< HEAD
          <!-- TeslaOS Update Center -->
          <PreferenceScreen android:key="update_settings"
                 android:title="@string/updater_title"
@@ -41,15 +39,6 @@
             <intent android:action="android.intent.action.MAIN"
                     android:targetPackage="com.teslaos.ota"
                     android:targetClass="com.teslaos.center.TeslaOSUpdateCenter" />
-=======
-        <!-- CyanogenMod Updates -->
-        <PreferenceScreen android:key="cm_updates"
-                android:title="@string/cmupdate_settings_title"
-                android:summary="@string/system_update_settings_list_item_summary">
-            <intent android:action="android.intent.action.MAIN"
-                    android:targetPackage="com.cyanogenmod.updater"
-                    android:targetClass="com.cyanogenmod.updater.UpdatesSettings" />
->>>>>>> abe4aff41352fb2ce92247178ae03a5fc8e2a9bc
         </PreferenceScreen>
 
         <!-- Device status - launches activity -->
@@ -68,14 +57,6 @@
             <intent android:action="android.settings.SHOW_MANUAL" />
         </PreferenceScreen>
 
-        <!-- Anonymous statistics - (CMStats) -->
-        <PreferenceScreen
-            android:key="cmstats"
-            android:title="@string/anonymous_statistics_title"
-            android:summary="@string/anonymous_statistics_summary"
-            android:fragment="com.android.settings.cmstats.AnonymousStats" >
-        </PreferenceScreen>
-
         <!-- Legal Information -->
         <PreferenceScreen
                 android:key="container"
@@ -91,12 +72,6 @@
         <!-- Feedback on the device -->
         <PreferenceScreen android:key="device_feedback"
                 android:title="@string/device_feedback">
-        </PreferenceScreen>
-
-        <!-- Contributors cloud -->
-        <PreferenceScreen android:key="contributors_cloud"
-            android:title="@string/contributors_cloud_fragment_title"
-            android:fragment="com.android.settings.contributors.ContributorsCloudFragment" >
         </PreferenceScreen>
 
         <!-- Device hardware model -->

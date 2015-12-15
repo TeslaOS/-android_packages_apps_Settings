@@ -373,7 +373,6 @@ public class Status extends InstrumentedPreferenceActivity {
         return h + ":" + pad(m) + ":" + pad(s);
     }
 
-<<<<<<< HEAD
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         final int itemId = item.getItemId();
@@ -393,7 +392,6 @@ public class Status extends InstrumentedPreferenceActivity {
         activity.finish();
     }
 
-=======
     private String getSerialNumber() {
         CMHardwareManager hardware = CMHardwareManager.getInstance(this);
         if (hardware.isSupported(CMHardwareManager.FEATURE_SERIAL_NUMBER)) {
@@ -402,5 +400,4 @@ public class Status extends InstrumentedPreferenceActivity {
             return Build.SERIAL;
         }
     }
->>>>>>> abe4aff41352fb2ce92247178ae03a5fc8e2a9bc
 }
