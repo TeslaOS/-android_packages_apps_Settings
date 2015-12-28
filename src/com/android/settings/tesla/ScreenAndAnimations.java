@@ -22,12 +22,14 @@ public class ScreenAndAnimations extends SettingsPreferenceFragment implements
     private static final String KEY_TOAST_ANIMATION = "toast_animation";
     private static final String KEY_LISTVIEW_ANIMATION = "listview_animation";
     private static final String KEY_LISTVIEW_INTERPOLATOR = "listview_interpolator";
+    private static final String POWER_MENU_ANIMATIONS = "power_menu_animations";
 
     private Context mContext;
 
     private ListPreference mToastAnimation;
     private ListPreference mListViewAnimation;
     private ListPreference mListViewInterpolator;
+    private ListPreference mPowerMenuAnimations;
 
     @Override
     public void onCreate(Bundle icicle) {
@@ -62,6 +64,13 @@ public class ScreenAndAnimations extends SettingsPreferenceFragment implements
         mListViewInterpolator.setSummary(mListViewInterpolator.getEntry());
         mListViewInterpolator.setOnPreferenceChangeListener(this);
         mListViewInterpolator.setEnabled(listviewanimation > 0);
+
+        mPowerMenuAnimations = (ListPreference) findPreference(POWER_MENU_ANIMATIONS);
+        int PowerMenuAnimations = Settings.System.getInt(getContentResolver(),
+                Settings.System.POWER_MENU_ANIMATIONS, 0);
+        mPowerMenuAnimations.setValue(String.valueOf(PowerMenuAnimations));
+        mPowerMenuAnimations.setSummary(mPowerMenuAnimations.getEntry());
+        mPowerMenuAnimations.setOnPreferenceChangeListener(this);
     }
 
     @Override
@@ -99,6 +108,13 @@ public class ScreenAndAnimations extends SettingsPreferenceFragment implements
                     Settings.System.LISTVIEW_INTERPOLATOR,
                     value);
             mListViewInterpolator.setSummary(mListViewInterpolator.getEntries()[index]);
+        }
+        if (preference == mPowerMenuAnimations) {
+            Settings.System.putInt(getContentResolver(), Settings.System.POWER_MENU_ANIMATIONS,
+                    Integer.valueOf((String) objValue));
+            mPowerMenuAnimations.setValue(String.valueOf(objValue));
+            mPowerMenuAnimations.setSummary(mPowerMenuAnimations.getEntry());
+            return true;
         }
         return false;
     }
