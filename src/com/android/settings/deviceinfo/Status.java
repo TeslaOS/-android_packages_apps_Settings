@@ -37,6 +37,10 @@ import android.os.SystemProperties;
 import android.os.UserHandle;
 import android.preference.Preference;
 import android.preference.PreferenceActivity;
+import android.preference.PreferenceScreen;
+import android.telephony.SubscriptionInfo;
+import android.telephony.SubscriptionManager;
+import android.telephony.TelephonyManager;
 import android.text.TextUtils;
 import android.view.MenuItem;
 import android.view.View;
@@ -222,6 +226,36 @@ public class Status extends InstrumentedPreferenceActivity {
                 || Utils.isWifiOnly(this)) {
             removePreferenceFromScreen(KEY_SIM_STATUS);
             removePreferenceFromScreen(KEY_IMEI_INFO);
+        } else {
+            int numPhones = TelephonyManager.getDefault().getPhoneCount();
+
+            if (numPhones > 1) {
+                PreferenceScreen prefSet = getPreferenceScreen();
+                Preference singleSimPref = prefSet.findPreference(KEY_SIM_STATUS);
+                SubscriptionManager subscriptionManager = SubscriptionManager.from(this);
+
+                for (int i = 0; i < numPhones; i++) {
+                    SubscriptionInfo sir =
+                            subscriptionManager.getActiveSubscriptionInfoForSimSlotIndex(i);
+                    Preference pref = new Preference(this);
+
+                    pref.setOrder(singleSimPref.getOrder());
+                    pref.setTitle(getString(R.string.sim_card_status_title, i + 1));
+                    if (sir != null) {
+                        pref.setSummary(sir.getDisplayName());
+                    } else {
+                        pref.setSummary(R.string.sim_card_summary_empty);
+                    }
+
+                    Intent intent = new Intent(this, SimStatus.class);
+                    intent.putExtra(SimStatus.EXTRA_SLOT_ID, i);
+                    pref.setIntent(intent);
+
+                    prefSet.addPreference(pref);
+                }
+
+                prefSet.removePreference(singleSimPref);
+            }
         }
 
         // Make every pref on this screen copy its data to the clipboard on longpress.
@@ -244,6 +278,20 @@ public class Status extends InstrumentedPreferenceActivity {
                     return true;
                 }
             });
+
+        ActionBar actionBar = getActionBar();
+        if (actionBar != null) {
+            actionBar.setDisplayHomeAsUpEnabled(true);
+        }
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == android.R.id.home) {
+            finish();
+            return true;
+        }
+        return false;
     }
 
     @Override
@@ -399,5 +447,21 @@ public class Status extends InstrumentedPreferenceActivity {
         } else {
             return Build.SERIAL;
         }
+    }
+
+    public static String getSarValues(Resources res) {
+        String headLevel = String.format(res.getString(R.string.maximum_head_level,
+                TextUtils.split(res.getString(R.string.sar_head_level), ",")));
+        String bodyLevel = String.format(res.getString(R.string.maximum_body_level,
+                TextUtils.split(res.getString(R.string.sar_body_level), ",")));
+        return headLevel + "\n" + bodyLevel;
+    }
+
+    public static String getIcCodes(Resources resources) {
+        String model = String.format(resources.getString(R.string.ic_code_model,
+                Build.MODEL));
+        String icCode = String.format(resources.getString(R.string.ic_code_full,
+                resources.getString(R.string.ic_code)));
+        return model + "\n" + icCode;
     }
 }
