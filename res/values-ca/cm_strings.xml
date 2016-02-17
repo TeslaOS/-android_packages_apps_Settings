@@ -708,7 +708,7 @@
   <string name="status_bar_show_weather_title">Mostra el temps</string>
   <string name="status_bar_show_weather_summary">Mostra el temps per sobre el panell d\'ajustos ràpids</string>
   <string name="qs_category_title">Panell d\'ajustos ràpids</string>
-  <string name="qs_brightness_slider_title">Mostra el deslliçador de brillantor</string>
+  <string name="qs_brightness_slider_title">Mostra la barra lliscant de brillantor</string>
   <string name="qs_hide_tiles_with_sensitive_data">Amaga les cel·les privades quan estigui bloquejat</string>
   <string name="qs_order_title">Selecciona i ordena cel·les</string>
   <string name="add_qs">Afegeix una nova cel·la</string>
@@ -766,7 +766,7 @@
   <string name="expanded_hide_status">Amaga la barra d\'estat</string>
   <string name="expanded_hide_navigation">Amaga la barra de navegació</string>
   <string name="expanded_hide_both">Amaga els dos</string>
-  <string name="expanded_nothing_to_show">Per afegir una configuració personalitzada per a cada app en l\'estat extès, estableix com a deshabilitada l\'opció \"Habilitat per a tots\"</string>
+  <string name="expanded_nothing_to_show">Per afegir una configuració personalitzada per a cada aplicació en l\'estat extès, estableix com a deshabilitada l\'opció \"Habilitat per a tots\"</string>
   <string name="expanded_enabled_for_all">Habilitat per a tots</string>
   <string name="expanded_desktop_style">Estil d\'escriptori extès</string>
   <string name="expanded_desktop_style_description">Escull un estil d\'escriptori extès per defecte</string>
@@ -856,6 +856,8 @@
   <string name="live_display_color_profile_cinema_summary">Reproducció del color perfecte per a multimèdia</string>
   <string name="live_display_color_profile_astronomy_title">Astronomia</string>
   <string name="live_display_color_profile_astronomy_summary">Vermells profunds per preservar la visió nocturna</string>
+  <string name="live_display_color_profile_basic_title">Bàsic</string>
+  <string name="live_display_color_profile_basic_summary">Utilitza la pantalla sense calibrar</string>
   <string name="battery_saver_threshold">Llindar d\'estalvi de bateria</string>
   <string name="battery_saver_summary">Redueix el rendiment i limita les dades en segon pla</string>
   <string name="battery_saver_summary_unavailable">No disponible durant la càrrega</string>
@@ -898,6 +900,11 @@
   <string name="factory_reset_erase_sd_card_summary">Esborra totes les dades a la targeta SD, incloent-hi la música i les fotos</string>
   <string name="factory_reset_warning_text_reset_now">RESTAURA ARA</string>
   <string name="factory_reset_warning_text_message">S\'eliminaran tots els teus comptes, aplicacions, dades d\'aplicacions i ajustaments del sistema d\'aquest dispositiu. Això no es pot revertir.</string>
+  <string name="wifi_show_all">Mostra-ho tot</string>
+  <string name="wifi_show_protected">Mostra les xarxes protegides</string>
+  <string name="wifi_show_open">Mostra les xarxes obertes</string>
+  <string name="wifi_empty_list_protected">No hi ha xarxes Wi\u2011Fi protegides</string>
+  <string name="wifi_empty_list_open">No hi ha xarxes Wi\u2011Fi obertes</string>
   <string name="wifi_setting_countrycode_title">Codi de regió de Wi\u2011Fi</string>
   <string name="wifi_setting_countrycode_summary">Especifica el codi de regió per al Wi\u2011Fi</string>
   <string name="wifi_setting_countrycode_error">Hi ha un problema al establir el codi de regió.</string>

@@ -381,8 +381,8 @@
   <string name="app_ops_summaries_receive_mms">mms ontvangen</string>
   <string name="app_ops_summaries_receive_wap_push">WAP-push ontvangen</string>
   <string name="app_ops_summaries_send_sms">sms verzenden</string>
-  <string name="app_ops_summaries_read_icc_sms">ICC sms lezen</string>
-  <string name="app_ops_summaries_write_icc_sms">ICC sms schrijven</string>
+  <string name="app_ops_summaries_read_icc_sms">ICC-sms lezen</string>
+  <string name="app_ops_summaries_write_icc_sms">ICC-sms schrijven</string>
   <string name="app_ops_summaries_modify_settings">instellingen aanpassen</string>
   <string name="app_ops_summaries_draw_on_top">bovenop tekenen</string>
   <string name="app_ops_summaries_access_notifications">toegang tot meldingen</string>
@@ -403,7 +403,7 @@
   <string name="app_ops_summaries_keep_awake">ingeschakeld houden</string>
   <string name="app_ops_summaries_monitor_location">locatie bijhouden</string>
   <string name="app_ops_summaries_monitor_high_power_location">locatie bijhouden met hoog energieverbruik</string>
-  <string name="app_ops_summaries_get_usage_stats">app-gebruiksstatistieken verkrijgen</string>
+  <string name="app_ops_summaries_get_usage_stats">app-gebruiksstatistieken opvragen</string>
   <string name="app_ops_summaries_mute_unmute_microphone">microfoon in-/uitschakelen</string>
   <string name="app_ops_summaries_toast_window">meldingen weergeven</string>
   <string name="app_ops_summaries_project_media">media projecteren</string>
@@ -455,7 +455,7 @@
   <string name="app_ops_labels_notification_volume">Meldingsvolume</string>
   <string name="app_ops_labels_bluetooth_volume">Bluetooth-volume</string>
   <string name="app_ops_labels_keep_awake">Ingeschakeld houden</string>
-  <string name="app_ops_labels_get_usage_stats">App-gebruiksstatistieken verkrijgen</string>
+  <string name="app_ops_labels_get_usage_stats">App-gebruiksstatistieken opvragen</string>
   <string name="app_ops_labels_mute_unmute_microphone">Microfoon in-/uitschakelen</string>
   <string name="app_ops_labels_toast_window">Meldingen weergeven</string>
   <string name="app_ops_labels_project_media">Media projecteren</string>
@@ -775,7 +775,7 @@
   <string name="lockscreen_targets_message">Snelkoppelingen vergrendelingsscherm</string>
   <string name="lockscreen_default_target">Standaard</string>
   <string name="lockscreen_none_target">Geen</string>
-  <string name="lockscreen_message">Tik recht of links op een pictogram om de snelkoppeling opnieuw toe te wijzen.</string>
+  <string name="lockscreen_message">Tik links of rechts op een pictogram om de snelkoppeling opnieuw toe te wijzen.</string>
   <string name="lockscreen_choose_action_title">Actie selecteren</string>
   <string name="lockscreen_visualizer_title">Muziekvisualisaties weergeven</string>
   <string name="nfc_title_category">NFC</string>
@@ -856,6 +856,8 @@
   <string name="live_display_color_profile_cinema_summary">Perfecte kleurweergave voor media</string>
   <string name="live_display_color_profile_astronomy_title">Astronomie</string>
   <string name="live_display_color_profile_astronomy_summary">Diepe rode kleuren voor nachtweergave</string>
+  <string name="live_display_color_profile_basic_title">Basis</string>
+  <string name="live_display_color_profile_basic_summary">Scherm ongekalibreerd gebruiken</string>
   <string name="battery_saver_threshold">Drempelwaarde energiebesparing</string>
   <string name="battery_saver_summary">Prestaties verminderen en achtergrondgegevens beperken</string>
   <string name="battery_saver_summary_unavailable">Niet beschikbaar bij opladen</string>
@@ -898,6 +900,11 @@
   <string name="factory_reset_erase_sd_card_summary">Alle gegevens op de SD-kaart wissen, inclusief muziek en foto\'s</string>
   <string name="factory_reset_warning_text_reset_now">NU OPNIEUW INSTELLEN</string>
   <string name="factory_reset_warning_text_message">Al uw accounts, apps, app-gegevens en systeeminstellingen op dit apparaat worden gewist. Dit kan niet ongedaan worden gemaakt.</string>
+  <string name="wifi_show_all">Alles tonen</string>
+  <string name="wifi_show_protected">Beveiligde wifi-netwerken tonen</string>
+  <string name="wifi_show_open">Openbare wifi-netwerken tonen</string>
+  <string name="wifi_empty_list_protected">Geen beveiligde wifi-netwerken</string>
+  <string name="wifi_empty_list_open">Geen openbare wifi-netwerken</string>
   <string name="wifi_setting_countrycode_title">Wifi-regiocode</string>
   <string name="wifi_setting_countrycode_summary">Regiocode opgeven voor wifi</string>
   <string name="wifi_setting_countrycode_error">Kan regiocode niet instellen.</string>
