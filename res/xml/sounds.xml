@@ -25,7 +25,7 @@
         <!-- Ring volume -->
         <com.android.settings.notification.VolumeSeekBarPreference
                 android:key="ring_volume"
-                android:icon="@*android:drawable/ic_audio_ring_notif"
+                android:icon="@drawable/ic_audio_ring"
                 android:title="@string/ring_volume_option_title" />
 
         <!-- Media volume -->
@@ -82,6 +82,13 @@
                 android:key="increasing_ring_volume"
                 android:icon="@drawable/ring_notif_increasing"
                 android:dependency="increasing_ring"/>
+
+        <!-- Headset -->
+        <com.android.settings.cyanogenmod.CMSystemSettingSwitchPreference
+                android:key="headset_connect_player"
+                android:title="@string/headset_connect_player_title"
+                android:summary="@string/headset_connect_player_summary"
+                android:defaultValue="false" />
 
         <!-- Other sounds -->
         <Preference

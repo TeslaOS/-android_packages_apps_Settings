@@ -29,11 +29,10 @@
             settings:keywords="@string/keywords_lockscreen"
             android:persistent="false"/>
 
-    </PreferenceCategory>
-
-    <PreferenceCategory
-        android:key="general_category"
-        android:title="@string/title_general">
+        <SwitchPreference
+            android:key="directlyshow"
+            android:persistent="false"
+            android:title="@string/lock_directly_show_pin"/>
 
         <com.android.settings.cyanogenmod.CMSystemSettingSwitchPreference
             android:key="lockscreen_scramble_pin_layout"
@@ -52,21 +51,44 @@
             android:key="power_button_instantly_locks"
             android:title="@string/lockpattern_settings_enable_power_button_instantly_locks"/>
 
-        <com.android.settings.cyanogenmod.CMSecureSettingSwitchPreference
-            android:key="lockscreen_visualizer"
-            android:title="@string/lockscreen_visualizer_title"
-            android:defaultValue="true"/>
+        <Preference
+            android:key="manage_trust_agents"
+            android:title="@string/manage_trust_agents"
+            android:summary="@string/manage_trust_agents_summary"
+            android:persistent="false"
+            android:fragment="com.android.settings.TrustAgentSettings"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="general_category"
+        android:title="@string/title_general">
 
         <com.android.settings.SingleLineSummaryPreference
             android:key="owner_info_settings"
             android:title="@string/owner_info_settings_title"
             android:summary="@string/owner_info_settings_summary"/>
 
+<<<<<<< HEAD
         <Preference android:key="manage_trust_agents"
                     android:title="@string/manage_trust_agents"
                     android:summary="@string/manage_trust_agents_summary"
                     android:persistent="false"
                     android:fragment="com.android.settings.TrustAgentSettings"/>
+=======
+        <PreferenceScreen
+            android:key="lockscreen_shortcuts_settings"
+            android:title="@string/lockscreen_targets_message" >
+            <intent
+                android:targetPackage="com.android.systemui"
+                android:targetClass="com.android.systemui.cm.LockscreenShortcutsActivity" />
+        </PreferenceScreen>
+
+        <com.android.settings.cyanogenmod.CMSecureSettingSwitchPreference
+            android:key="lockscreen_visualizer"
+            android:title="@string/lockscreen_visualizer_title"
+            android:defaultValue="true"/>
+>>>>>>> 3febff0095e96108b78ce3b90e05e95f11030b23
 
         <PreferenceScreen
             android:key="lockscreen_wallpaper"
