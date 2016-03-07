@@ -491,10 +491,16 @@
     <string name="youtube">Youtube</string>
     <string name="zedge">Zedge</string>
 
-    <!-- Tesla OS lockscreen -->
+    <!-- Tesla OS lockscreen Settings -->
     <string name="tesla_lockscreen_title">Lockscreen</string>
     <string name="tesla_lockscreen_category">Lockscreen settings</string>
     <string name="tesla_lockscreen_shortcuts_category">Shortcuts</string>
+
+    <!-- Tesla OS Settings -->
+    <string name="tesla_statusbar_title">Statusbar</string>
+    <string name="tesla_nav_title">Navigation</string>
+    <string name="tesla_others_title">Others</string>
+
     <!-- CM lockscreen shortcuts -->
     <string name="cm_lockscreen_shortcuts_title">Bottom corners shortcuts</string>
     <string name="cm_lockscreen_shortcuts_summary">View or change custom bottom corners lockscreen shortcuts</string>

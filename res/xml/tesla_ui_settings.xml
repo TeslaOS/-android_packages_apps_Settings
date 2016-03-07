@@ -20,162 +20,28 @@
     android:title="@string/tesla_settings_title"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
-    <!-- Screen and animations -->
-    <PreferenceScreen
-            android:key="screen_and_animations"
-            android:fragment="com.android.settings.tesla.ScreenAndAnimations"
-            android:title="@string/screen_and_animations_title"
-            />
-    <!-- Network Traffic -->
-    <PreferenceScreen
-            android:key="traffic"
-            android:title="@string/traffic_category"
-            android:fragment="com.android.settings.tesla.NetworkTraffic"
-            />
+            <!-- Lockscreen -->
+            <PreferenceScreen
+                  android:key="lockscreen_tesla"
+                  android:fragment="com.android.settings.tesla.LockScreenSettings"
+                  android:title="@string/tesla_lockscreen_title" />
 
-    <!-- Wakelock blocker -->
-    <PreferenceScreen
-            android:key="wakelock_blocker"
-            android:title="@string/wakelock_blocker_title"
-            android:fragment="com.android.settings.tesla.WakeLockBlocker"
-            />
+            <!-- Statusbar -->
+            <PreferenceScreen
+                  android:key="statusbar_tesla"
+                  android:fragment="com.android.settings.tesla.StatusBarSettings"
+                  android:title="@string/tesla_statusbar_title" />
 
-    <!-- Allow disabling of FC dialogs -->
-    <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
-            android:key="disable_fc_notifications"
-            android:title="@string/disable_fc_notifications_title"
-            android:summary="@string/disable_fc_notifications_summary"
-            />
+            <!-- Navigation -->
+            <PreferenceScreen
+                  android:key="nav_tesla"
+                  android:fragment="com.android.settings.tesla.NavigationSettings"
+                  android:title="@string/tesla_nav_title" />
 
-    <!-- Contextual headers -->
-      <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
-            android:key="status_bar_custom_header"
-            android:title="@string/status_bar_custom_header_title"
-            android:summary="@string/status_bar_custom_header_summary"
-            android:defaultValue="false"
-            />
-
-      <!--  Double tap to sleep anywhere on the lock screen -->
-      <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
-             android:key="double_tap_sleep_anywhere"
-             android:title="@string/double_tap_sleep_anywhere_title"
-             android:summary="@string/double_tap_sleep_anywhere_summary"
-             />
-
-      <!--  Double tap to sleep on the navigation bar -->
-      <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
-             android:key="double_tap_sleep_navbar"
-             android:title="@string/double_tap_sleep_nav_bar_title"
-             android:summary="@string/double_tap_sleep_nav_bar_summary"
-             android:defaultValue="false"
-            />
-
-      <!--  carrier label -->
-      <PreferenceScreen
-              android:key="carrierlabel"
-              android:fragment="com.android.settings.tesla.fragments.CarrierLabel"
-              android:layout="@layout/preference_carrierlabel"
-              android:title="@string/carrier_options"
-              />
-
-              <PreferenceCategory
-                  android:key="dim_nav_buttons_cat"
-                  android:title="@string/dim_nav_buttons_category">
-
-                  <SwitchPreference
-                      android:key="dim_nav_buttons"
-                      android:title="@string/dim_nav_buttons_title"
-                      android:summary="@string/dim_nav_buttons_summary" />
-
-                      <SwitchPreference
-                          android:key="dim_nav_buttons_touch_anywhere"
-                          android:dependency="dim_nav_buttons"
-                          android:title="@string/dim_nav_buttons_touch_anywhere_title"
-                          android:summaryOn="@string/dim_nav_buttons_touch_anywhere_summary_on"
-                          android:summaryOff="@string/dim_nav_buttons_touch_anywhere_summary_off" />
-
-                  <com.android.settings.tesla.utils.SeekBarPreferenceCham
-                      android:key="dim_nav_buttons_timeout"
-                      android:dependency="dim_nav_buttons"
-                      android:title="@string/dim_nav_buttons_timeout_title"
-                      android:summary="@string/dim_nav_buttons_timeout_summary" />
-
-                  <com.android.settings.tesla.utils.SeekBarPreferenceCham
-                      android:key="dim_nav_buttons_alpha"
-                      android:dependency="dim_nav_buttons"
-                      android:title="@string/dim_nav_buttons_alpha_title"
-                      android:summary="@string/dim_nav_buttons_alpha_summary" />
-
-                  <SwitchPreference
-                      android:key="dim_nav_buttons_animate"
-                      android:dependency="dim_nav_buttons"
-                      android:title="@string/dim_nav_buttons_animate_title"
-                      android:summary="@string/dim_nav_buttons_animate_summary" />
-
-                  <com.android.settings.tesla.utils.SeekBarPreferenceCham
-                      android:key="dim_nav_buttons_animate_duration"
-                      android:dependency="dim_nav_buttons_animate"
-                      android:title="@string/dim_nav_buttons_animate_duration_title"
-                      android:summary="@string/dim_nav_buttons_animate_duration_summary" />
-
-              </PreferenceCategory>
-
-        <PreferenceScreen
-        android:key="status_bar_temperature_style"
-            android:title="@string/status_bar_temperature_title"
-            android:fragment="com.android.settings.tesla.StatusBarWeather" />
-
-        <!-- Lockscreen Weather -->
-        <PreferenceCategory
-            android:key="status_bar_show_weather_category"
-            android:title="@string/status_bar_show_weather_category" >
-
-            <com.android.settings.cyanogenmod.CMSystemSettingSwitchPreference
-                android:key="status_bar_show_weather"
-                android:title="@string/weather_show_weather_title"
-                android:summary="@string/weather_show_weather_summary"
-                android:defaultValue="true" />
-
-           <PreferenceScreen
-                android:key="lockscreen_weather"
-                android:title="@string/lock_screen_weather_settings_title"
-                android:fragment="com.android.settings.tesla.LockScreenWeatherSettings" />
-
-        </PreferenceCategory>
-
-        <!-- Gesture anywhere -->
-        <PreferenceScreen
-             android:key="gesture_anywhere"
-             android:fragment="com.android.settings.tesla.gestureanywhere.GestureAnywhereSettings"
-             android:title="@string/gesture_anywhere_title" />
-
-        <!-- Lockscreen shortcuts -->
-        <PreferenceScreen
-             android:key="lockscreen_tesla"
-             android:fragment="com.android.settings.tesla.LockScreenSettings"
-             android:title="@string/tesla_lockscreen_title" />
-
-             <!-- Pie Control -->
-             <PreferenceScreen
-                  android:key="pa_pie_control"
-                  android:title="@string/pa_pie_control_title"
-                  android:fragment="com.android.settings.tesla.PieControl" />
-
-    <!-- Slim Recents  -->
-    <PreferenceScreen
-            android:key="recent_panel"
-            android:title="@string/recent_panel_slim"
-            android:summary="@string/recent_panel_slim_summary"
-            android:fragment="com.android.settings.slim.RecentPanel"
-            />
-
-
-                    <PreferenceScreen
-                        android:key="lockscreen_wallpaper"
-                        android:title="@string/lockscreen_wallpaper_title"
-                        android:summary="@string/lockscreen_wallpaper_summary"
-                        android:persistent="false"
-                        android:fragment="com.android.settings.tesla.LockscreenWallpaper">
-                    </PreferenceScreen>
+            <!-- Others -->
+            <PreferenceScreen
+                  android:key="others_tesla"
+                  android:fragment="com.android.settings.tesla.OthersSettings"
+                 android:title="@string/tesla_others_title" />
 
 </PreferenceScreen>
