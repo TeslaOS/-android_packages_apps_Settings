@@ -649,8 +649,6 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
             // minimum 100 is 1 interval of the 100 multiplier
             mDimNavButtonsAnimateDuration.setInitValue((animateDuration / 100) - 1);
         }
-
-        updateNavbarPreferences(enableNavigationBar);
     }
 
     private void updateNavbarPreferences(boolean show) {

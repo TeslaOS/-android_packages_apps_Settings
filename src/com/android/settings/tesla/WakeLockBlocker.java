@@ -159,7 +159,7 @@ public class WakeLockBlocker extends SettingsPreferenceFragment {
 
     @Override
     protected int getMetricsCategory() {
-       return MetricsLogger.DONT_TRACK_ME_BRO;
+       return MetricsLogger.APPLICATION;
    }
 
     @Override

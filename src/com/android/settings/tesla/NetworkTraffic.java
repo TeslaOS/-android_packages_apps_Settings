@@ -132,7 +132,7 @@ public class NetworkTraffic extends SettingsPreferenceFragment
 
     @Override
     protected int getMetricsCategory() {
-       return MetricsLogger.DONT_TRACK_ME_BRO;
+       return MetricsLogger.APPLICATION;
    }
 
     private void updateNetworkTrafficState(int mIndex) {

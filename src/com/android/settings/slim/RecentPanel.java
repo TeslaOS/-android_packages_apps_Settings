@@ -40,6 +40,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MenuInflater;
 
+import com.android.internal.logging.MetricsLogger;
+
 import com.android.settings.DialogCreatable;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
@@ -92,6 +94,11 @@ public class RecentPanel extends SettingsPreferenceFragment implements DialogCre
         addPreferencesFromResource(R.xml.recent_panel_settings);
         initializeAllPreferences();
     }
+
+    @Override
+    protected int getMetricsCategory() {
+       return MetricsLogger.APPLICATION;
+   }
 
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         if (preference == mUseSlimRecents) {
