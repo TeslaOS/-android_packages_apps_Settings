@@ -85,7 +85,6 @@
                   <SwitchPreference
                       android:key="dim_nav_buttons"
                       android:title="@string/dim_nav_buttons_title"
-                      android:dependency="enable_nav_bar"
                       android:summary="@string/dim_nav_buttons_summary" />
 
                       <SwitchPreference
@@ -95,13 +94,13 @@
                           android:summaryOn="@string/dim_nav_buttons_touch_anywhere_summary_on"
                           android:summaryOff="@string/dim_nav_buttons_touch_anywhere_summary_off" />
 
-                  <SlimSeekBarPreference
+                  <com.android.settings.tesla.utils.SeekBarPreferenceCham
                       android:key="dim_nav_buttons_timeout"
                       android:dependency="dim_nav_buttons"
                       android:title="@string/dim_nav_buttons_timeout_title"
                       android:summary="@string/dim_nav_buttons_timeout_summary" />
 
-                  <SlimSeekBarPreference
+                  <com.android.settings.tesla.utils.SeekBarPreferenceCham
                       android:key="dim_nav_buttons_alpha"
                       android:dependency="dim_nav_buttons"
                       android:title="@string/dim_nav_buttons_alpha_title"
@@ -113,7 +112,7 @@
                       android:title="@string/dim_nav_buttons_animate_title"
                       android:summary="@string/dim_nav_buttons_animate_summary" />
 
-                  <SlimSeekBarPreference
+                  <com.android.settings.tesla.utils.SeekBarPreferenceCham
                       android:key="dim_nav_buttons_animate_duration"
                       android:dependency="dim_nav_buttons_animate"
                       android:title="@string/dim_nav_buttons_animate_duration_title"
@@ -169,5 +168,14 @@
             android:summary="@string/recent_panel_slim_summary"
             android:fragment="com.android.settings.slim.RecentPanel"
             />
+
+
+                    <PreferenceScreen
+                        android:key="lockscreen_wallpaper"
+                        android:title="@string/lockscreen_wallpaper_title"
+                        android:summary="@string/lockscreen_wallpaper_summary"
+                        android:persistent="false"
+                        android:fragment="com.android.settings.tesla.LockscreenWallpaper">
+                    </PreferenceScreen>
 
 </PreferenceScreen>
