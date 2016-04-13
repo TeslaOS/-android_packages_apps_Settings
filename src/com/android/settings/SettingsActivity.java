@@ -72,7 +72,6 @@ import com.android.settings.accessibility.CaptionPropertiesFragment;
 import com.android.settings.accounts.AccountSettings;
 import com.android.settings.accounts.AccountSyncSettings;
 import com.android.settings.applications.DrawOverlayDetails;
-import com.android.settings.tesla.NavigationSettings;
 import com.android.settings.applications.InstalledAppDetails;
 import com.android.settings.applications.ManageApplications;
 import com.android.settings.applications.ManageAssist;
@@ -382,8 +381,7 @@ public class SettingsActivity extends Activity
             ProfilesSettings.class.getName(),
             NotificationManagerSettings.class.getName(),
             LiveLockScreenSettings.class.getName(),
-            WeatherServiceSettings.class.getName(),
-            NavigationSettings.class.getName()
+            WeatherServiceSettings.class.getName()
     };
 
 
