@@ -199,24 +199,6 @@
     <string name="dim_nav_buttons_touch_anywhere_summary_on">Touching anywhere on the screen will cause buttons to un-dim</string>
     <string name="dim_nav_buttons_touch_anywhere_summary_off">Only touches on the navbar will cause buttons to un-dim</string>
 
-    <!-- Status bar temperature -->
-    <string name="status_bar_temperature_title">Temperature</string>
-    <string name="status_bar_temperature_hidden">Hidden</string>
-    <string name="status_bar_temperature_show_scale">Shown with scale</string>
-    <string name="status_bar_temperature_hide_scale">Shown without scale</string>
-    <string name="status_bar_temperature_location_title">Placement</string>
-    <string name="status_bar_temperature_location_summary">Select where the weather temperature is shown on the statusbar</string>
-    <string name="status_bar_temperature_location_right">Show on right</string>
-    <string name="status_bar_temperature_location_left">Show on left</string>
-    <string name="status_bar_weather_color_title">Temperature color</string>
-    <string name="status_bar_weather_size_title">Font size</string>
-    <string name="status_bar_weather_font_style_title">Font</string>
-    <string name="status_bar_weather_font_normal">Normal</string>
-    <string name="status_bar_weather_font_bold">Bold</string>
-    <string name="status_bar_weather_font_condensed">Condensed</string>
-    <string name="status_bar_weather_font_light">Light</string>
-    <string name="status_bar_weather_font_light_italic">Light Italic</string>
-
     <!-- Lockscreen wallpaper -->
     <string name="lockscreen_wallpaper_title">Wallpaper</string>
     <string name="lockscreen_wallpaper_summary">Set lockscreen wallpaper</string>
