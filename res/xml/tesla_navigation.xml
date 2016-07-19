@@ -52,13 +52,13 @@
                     android:summaryOn="@string/dim_nav_buttons_touch_anywhere_summary_on"
                     android:summaryOff="@string/dim_nav_buttons_touch_anywhere_summary_off" />
 
-            <com.android.settings.tesla.utils.SeekBarPreferenceCham
+            <SlimSeekBarPreference
                 android:key="dim_nav_buttons_timeout"
                 android:dependency="dim_nav_buttons"
                 android:title="@string/dim_nav_buttons_timeout_title"
                 android:summary="@string/dim_nav_buttons_timeout_summary" />
 
-            <com.android.settings.tesla.utils.SeekBarPreferenceCham
+            <SlimSeekBarPreference
                 android:key="dim_nav_buttons_alpha"
                 android:dependency="dim_nav_buttons"
                 android:title="@string/dim_nav_buttons_alpha_title"
@@ -70,7 +70,7 @@
                 android:title="@string/dim_nav_buttons_animate_title"
                 android:summary="@string/dim_nav_buttons_animate_summary" />
 
-            <com.android.settings.tesla.utils.SeekBarPreferenceCham
+            <SlimSeekBarPreference
                 android:key="dim_nav_buttons_animate_duration"
                 android:dependency="dim_nav_buttons_animate"
                 android:title="@string/dim_nav_buttons_animate_duration_title"
