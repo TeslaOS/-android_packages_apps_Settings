@@ -16,6 +16,17 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <!-- [CHAR LIMIT=NONE] Device Info screen. Countdown for user taps to show Device Id -->
+  <plurals name="show_device_id_countdown_cm">
+    <item quantity="one">Laitteen tunnus näytetään <xliff:g id="step_count">%1$d</xliff:g> vaiheen päästä.</item>
+    <item quantity="other">Laitteen tunnus näytetään <xliff:g id="step_count">%1$d</xliff:g> vaiheen päästä.</item>
+  </plurals>
+  <!--  Device Info screen. Confirmation that Device ID is copied to clipboard -->
+  <string name="show_device_id_copied_cm">Laitteen tunnus:[<xliff:g id="device_id">%1$s</xliff:g>] kopioitu liitepöydälle</string>
+  <!--  Device Info screen. Confirmation that Device ID is not available -->
+  <string name="show_device_id_failed_cm">Laitteen tunnus ei saatavilla tässä koontiversiossa</string>
+  <!-- [CHAR LIMIT=NONE] Device Info screen. Label for the deviceID text put to clipboard -->
+  <string name="show_device_id_clipboard_label">Laitteen tunnus</string>
   <!-- [CHAR LIMIT=NONE] Device Info screen. Countdown for user taps to enable development settings -->
   <plurals name="show_dev_countdown_cm">
     <item quantity="one">Kehittäjäasetukset otetaan käyttöön <xliff:g id="step_count">%1$d</xliff:g> vaiheen päästä.</item>
@@ -541,7 +552,7 @@
   <string name="double_tap_to_sleep_summary">Sulje laitteen näyttö tuplanapauttamalla tilapalkkia</string>
   <!-- Proximity wake -->
   <string name="proximity_wake_title">Estä herätys vahingossa</string>
-  <string name="proximity_wake_summary">Tarkista lähesyysanturi ennen laitteen herättämistä</string>
+  <string name="proximity_wake_summary">Tarkista läheisyysanturi herättävien eleiden varalta</string>
   <!-- Turn on display when power connected; turn off display when power disconnected -->
   <string name="wake_when_plugged_or_unplugged_title">Herää laturista</string>
   <string name="wake_when_plugged_or_unplugged_summary">Käynnistä näyttö kun virtalähde liitetään tai irrotetaan</string>
@@ -939,6 +950,11 @@
   <string name="zen_mode_summary_selected_callers">valitut soittajat</string>
   <!-- [CHAR LIMIT=50] Like zen_mode_summary_selected_messages, but part of a list, so lower case if needed -->
   <string name="zen_mode_summary_selected_messages">valitut viestit</string>
+  <!-- Allow vibration in zen mode -->
+  <string name="zen_mode_vibration">Värinä</string>
+  <string name="zen_mode_vibration_never">Värinä pois</string>
+  <string name="zen_mode_vibration_calls_only">Värinä vain puheluista</string>
+  <string name="zen_mode_vibration_calls_and_notifications">Värinä puheluille ja ilmoituksille</string>
   <!-- About phone settings screen, setting option dialog title to show regulatory information [CHAR LIMIT=25] -->
   <!-- SAR information -->
   <string name="maximum_head_level">Pää: %1$s W/kg</string>
@@ -1044,6 +1060,16 @@
   <string name="app_notification_show_on_keyguard_summary">Näytä tämän sovelluksen ilmoitukset lukitusnäytöllä</string>
   <string name="app_notification_no_ongoing_on_keyguard_title">Älä näytä pysyviä ilmoituksia lukitusnäytöllä</string>
   <string name="app_notification_no_ongoing_on_keyguard_summary">Älä koskaan näytä pysyviä ilmoituksia tästä sovelluksesta lukitusnäytöllä</string>
+  <!-- Notification sound timeout -->
+  <string name="app_notification_sound_timeout_title">Vähimmäisväli ilmoitusäänissä</string>
+  <string name="app_notification_sound_timeout_summary_template">Sallii äänen tai värinän vain seuraavin välein: <xliff:g id="duration">%1$s</xliff:g></string>
+  <string name="app_notification_sound_timeout_value_none">Ei rajoitusta</string>
+  <string name="app_notification_sound_timeout_value_10_seconds">10 sekuntia</string>
+  <string name="app_notification_sound_timeout_value_30_seconds">30 sekuntia</string>
+  <string name="app_notification_sound_timeout_value_1_minute">1 minuutti</string>
+  <string name="app_notification_sound_timeout_value_5_minutes">5 minuuttia</string>
+  <string name="app_notification_sound_timeout_value_15_minutes">10 minuuttia</string>
+  <string name="app_notification_sound_timeout_value_30_minutes">30 minuuttia</string>
   <!-- CmRadioInfo -->
   <string name="cm_radio_info_label">Parannettu radion ohjaus</string>
   <!-- Radio Control (IMS/MBN etc.) -->

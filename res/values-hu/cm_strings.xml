@@ -16,6 +16,17 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <!-- [CHAR LIMIT=NONE] Device Info screen. Countdown for user taps to show Device Id -->
+  <plurals name="show_device_id_countdown_cm">
+    <item quantity="one"><xliff:g id="step_count">%1$d</xliff:g> lépésre van attól, hogy lekérdezze az eszköz azonosítót.</item>
+    <item quantity="other"><xliff:g id="step_count">%1$d</xliff:g> lépésre van attól, hogy lekérdezze az eszköz azonosítót.</item>
+  </plurals>
+  <!--  Device Info screen. Confirmation that Device ID is copied to clipboard -->
+  <string name="show_device_id_copied_cm">Eszköz azonosító: [<xliff:g id="device_id">%1$s </xliff:g>] vágólapra másolva</string>
+  <!--  Device Info screen. Confirmation that Device ID is not available -->
+  <string name="show_device_id_failed_cm">Az eszköz azonosító nem érhető el ezen a kiadáson</string>
+  <!-- [CHAR LIMIT=NONE] Device Info screen. Label for the deviceID text put to clipboard -->
+  <string name="show_device_id_clipboard_label">Eszköz azonosító</string>
   <!-- [CHAR LIMIT=NONE] Device Info screen. Countdown for user taps to enable development settings -->
   <plurals name="show_dev_countdown_cm">
     <item quantity="one">Ön <xliff:g id="step_count">%1$d</xliff:g> lépésre van attól, hogy engedélyezze a fejlesztői beállításokat.</item>
@@ -541,7 +552,6 @@
   <string name="double_tap_to_sleep_summary">Érintse meg kétszer az állapotsávot a kijelző kikapcsolásához</string>
   <!-- Proximity wake -->
   <string name="proximity_wake_title">Véletlen ébresztés megakadályozása</string>
-  <string name="proximity_wake_summary">Közelség érzékelő ellenőrzése a képernyő felébresztése előtt</string>
   <!-- Turn on display when power connected; turn off display when power disconnected -->
   <string name="wake_when_plugged_or_unplugged_title">Felébredés töltő csatlakoztatásakor</string>
   <string name="wake_when_plugged_or_unplugged_summary">A képernyő bekapcsolása a töltő csatlakoztatása/eltávolítása után</string>
@@ -695,8 +705,12 @@
   <string name="status_bar_quick_qs_pulldown_summary_left">bal</string>
   <string name="status_bar_quick_qs_pulldown_summary_right">jobb</string>
   <string name="status_bar_quick_qs_pulldown_off">Ki</string>
+  <string name="status_bar_quick_qs_pulldown_left">Bal</string>
+  <string name="status_bar_quick_qs_pulldown_right">Jobb</string>
   <!-- Status bar - Clock -->
   <string name="status_bar_clock_style_title">Óra stílusa</string>
+  <string name="status_bar_clock_style_right">Jobb</string>
+  <string name="status_bar_clock_style_left">Bal</string>
   <string name="status_bar_clock_style_center">Középen</string>
   <string name="status_bar_clock_style_hidden">Rejtett</string>
   <string name="status_bar_am_pm_title">De/Du stílusa</string>
@@ -935,6 +949,11 @@
   <string name="zen_mode_summary_selected_callers">kiválasztott hívók</string>
   <!-- [CHAR LIMIT=50] Like zen_mode_summary_selected_messages, but part of a list, so lower case if needed -->
   <string name="zen_mode_summary_selected_messages">kiválasztott üzenetek</string>
+  <!-- Allow vibration in zen mode -->
+  <string name="zen_mode_vibration">Rezgés</string>
+  <string name="zen_mode_vibration_never">Ne rezegjen</string>
+  <string name="zen_mode_vibration_calls_only">Csak hívás esetén rezegjen</string>
+  <string name="zen_mode_vibration_calls_and_notifications">Hívások és értesítések esetén rezegjen</string>
   <!-- About phone settings screen, setting option dialog title to show regulatory information [CHAR LIMIT=25] -->
   <!-- SAR information -->
   <string name="maximum_head_level">Fej: %1$s W/kg</string>
@@ -1040,6 +1059,16 @@
   <string name="app_notification_show_on_keyguard_summary">Ezen alkalmazáshoz tartozó értesítések megjelenítése a zárképernyőn</string>
   <string name="app_notification_no_ongoing_on_keyguard_title">Állandó értesítés tiltása a zárképernyőn</string>
   <string name="app_notification_no_ongoing_on_keyguard_summary">Ezen alkalmazáshoz tartozó állandó értesítés soha ne jelenjen meg a zárképernyőn</string>
+  <!-- Notification sound timeout -->
+  <string name="app_notification_sound_timeout_title">Értesítési hangok közötti minimum időtartam</string>
+  <string name="app_notification_sound_timeout_summary_template">Hang vagy rezgés ismétlődésének engedélyezése: <xliff:g id="duration">%1$s</xliff:g></string>
+  <string name="app_notification_sound_timeout_value_none">Nincs korlátozás</string>
+  <string name="app_notification_sound_timeout_value_10_seconds">10 másodperc</string>
+  <string name="app_notification_sound_timeout_value_30_seconds">30 másodperc</string>
+  <string name="app_notification_sound_timeout_value_1_minute">1 perc</string>
+  <string name="app_notification_sound_timeout_value_5_minutes">5 perc</string>
+  <string name="app_notification_sound_timeout_value_15_minutes">10 perc</string>
+  <string name="app_notification_sound_timeout_value_30_minutes">30 perc</string>
   <!-- CmRadioInfo -->
   <string name="cm_radio_info_label">Fejlett rádiós vezérlés</string>
   <!-- Radio Control (IMS/MBN etc.) -->

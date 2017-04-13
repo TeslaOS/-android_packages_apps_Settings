@@ -16,6 +16,17 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <!-- [CHAR LIMIT=NONE] Device Info screen. Countdown for user taps to show Device Id -->
+  <plurals name="show_device_id_countdown_cm">
+    <item quantity="one">Ora sei a <xliff:g id="step_count">%1$d</xliff:g> passo dalla visualizzazione del Device ID.</item>
+    <item quantity="other">Ora sei a <xliff:g id="step_count">%1$d</xliff:g> passi dalla visualizzazione del Device ID.</item>
+  </plurals>
+  <!--  Device Info screen. Confirmation that Device ID is copied to clipboard -->
+  <string name="show_device_id_copied_cm">Device ID:[<xliff:g id="device_id">%1$s</xliff:g>] copiato negli appunti</string>
+  <!--  Device Info screen. Confirmation that Device ID is not available -->
+  <string name="show_device_id_failed_cm">Il Device ID non è disponibile su questa build</string>
+  <!-- [CHAR LIMIT=NONE] Device Info screen. Label for the deviceID text put to clipboard -->
+  <string name="show_device_id_clipboard_label">Device ID</string>
   <!-- [CHAR LIMIT=NONE] Device Info screen. Countdown for user taps to enable development settings -->
   <plurals name="show_dev_countdown_cm">
     <item quantity="one">Ora sei ad <xliff:g id="step_count">%1$d</xliff:g> passo dall\'attivare le impostazioni di sviluppo.</item>
@@ -155,7 +166,7 @@
   <string name="profile_lockmode_title">Modalità blocco schermo</string>
   <string name="profile_lockmode_policy_disabled_summary">I profili sono stati disattivati dall\'amministratore</string>
   <string name="profile_lockmode_insecure_summary">Non chiedere password o PIN</string>
-  <string name="profile_lockmode_disabled_summary">Disattiva schermata di blocco</string>
+  <string name="profile_lockmode_disabled_summary">Disattiva blocco schermo</string>
   <string name="profile_airplanemode_title">Modalità aereo</string>
   <string name="profile_brightness_title">Luminosità schermo</string>
   <string name="profile_brightness_override_summary">Imposta su %1$d%%</string>
@@ -541,7 +552,7 @@
   <string name="double_tap_to_sleep_summary">Doppio tocco sulla barra di stato per spegnere il display</string>
   <!-- Proximity wake -->
   <string name="proximity_wake_title">Previeni risvegli accidentali</string>
-  <string name="proximity_wake_summary">Controlla il sensore di prossimità prima di accendere lo schermo</string>
+  <string name="proximity_wake_summary">Controla il sensore di prossimità prima di risvegliare lo smartphone con le gesture</string>
   <!-- Turn on display when power connected; turn off display when power disconnected -->
   <string name="wake_when_plugged_or_unplugged_title">Risveglia al collegamento</string>
   <string name="wake_when_plugged_or_unplugged_summary">Accendi lo schermo quando si collega o si scollega l\'alimentazione</string>
@@ -569,7 +580,7 @@
   <string name="display_rotation_title">Rotazione schermo</string>
   <string name="display_rotation_disabled">Disattivata</string>
   <string name="display_rotation_unit">gradi</string>
-  <string name="display_lockscreen_rotation_title">Rotazione schermata blocco</string>
+  <string name="display_lockscreen_rotation_title">Rotazione blocco schermo</string>
   <string name="display_rotation_category_title">Modalità rotazione schermo</string>
   <string name="display_rotation_0_title">0 gradi</string>
   <string name="display_rotation_90_title">90 gradi</string>
@@ -760,8 +771,8 @@
   <string name="lockscreen_visualizer_title">Mostra visualizzatore musicale</string>
   <!-- lock screen disabled by QS tile warning -->
   <string name="lockscreen_disabled_by_qs_tile_title">Disattivata dai tile</string>
-  <string name="lockscreen_disabled_by_qs_tile_summary">Tocca per attivare la schermata di blocco</string>
-  <string name="lockscreen_disabled_by_qs_tile_summary_enabled">Schermata di blocco attiva!</string>
+  <string name="lockscreen_disabled_by_qs_tile_summary">Tocca per attivare il blocco schermo</string>
+  <string name="lockscreen_disabled_by_qs_tile_summary_enabled">Blocco schermo attivo!</string>
   <!-- Battery saver -->
   <string name="battery_saver_threshold">Soglia risparmio energetico</string>
   <string name="battery_saver_summary">Riduce le prestazioni e limita i dati in background</string>
@@ -895,7 +906,7 @@
                  <b>Ultimo aggiornamento:</b> <xliff:g id="date">%3$s</xliff:g>]]></string>
   <string name="category_sounds">Suoni</string>
   <string name="notification_manager">Notifiche</string>
-  <string name="lockscreen_settings">Schermata di blocco</string>
+  <string name="lockscreen_settings">Blocco schermo</string>
   <string name="category_lights">Luci</string>
   <string name="category_volume">Volume</string>
   <string name="category_vibrate">Vibrazione</string>
@@ -941,6 +952,11 @@
   <string name="zen_mode_summary_selected_callers">chiamanti selezionati</string>
   <!-- [CHAR LIMIT=50] Like zen_mode_summary_selected_messages, but part of a list, so lower case if needed -->
   <string name="zen_mode_summary_selected_messages">contatti selezionati</string>
+  <!-- Allow vibration in zen mode -->
+  <string name="zen_mode_vibration">Vibrazione</string>
+  <string name="zen_mode_vibration_never">Non vibrare</string>
+  <string name="zen_mode_vibration_calls_only">Vibra solo per chiamate</string>
+  <string name="zen_mode_vibration_calls_and_notifications">Vibra per chiamate e notifiche</string>
   <!-- About phone settings screen, setting option dialog title to show regulatory information [CHAR LIMIT=25] -->
   <!-- SAR information -->
   <string name="maximum_head_level">Testa: %1$s W/kg</string>
@@ -1034,7 +1050,7 @@
   <string name="restrict_cellular_access_title">Limita utilizzo dati mobili</string>
   <string name="restrict_cellular_access_summary">Disattiva accesso su dati mobili</string>
   <string name="restrict_cellular_access_dialog_title">Applicare restrizione dati mobili?</string>
-  <string name="restrict_cellular_access_dialog_summary">Questa funzione potrebbe impedire ad un\'app di funzionare correttamente quando sei connesso solo con dati mobili.\n\nPotresti trovare controlli per l\'utilizzo dati pià appropriati all\'interno delle impostazioni dell\'app stessa.</string>
+  <string name="restrict_cellular_access_dialog_summary">Questa funzione potrebbe impedire ad un\'app di funzionare correttamente quando sei connesso solo con dati mobili.\n\nPotresti trovare controlli per l\'utilizzo dati più appropriati all\'interno delle impostazioni dell\'app stessa.</string>
   <!-- Label for settings shortcut: carrier selection -->
   <string name="shortcut_carrier_title">Operatori di rete</string>
   <!-- title for lock screen blur preference -->
@@ -1042,10 +1058,20 @@
   <!-- title for lock screen weather preference -->
   <string name="lockscreen_weather_enabled_title">Mostra meteo</string>
   <!-- Per app controls for LP keyguard notifications -->
-  <string name="app_notification_show_on_keyguard_title">Mostra nella schermata di blocco</string>
-  <string name="app_notification_show_on_keyguard_summary">Mostra notifiche di quest\'app nella schermata di blocco</string>
-  <string name="app_notification_no_ongoing_on_keyguard_title">Disabilita la notifica persistente nella schermata di blocco</string>
-  <string name="app_notification_no_ongoing_on_keyguard_summary">Non mostrare mai notifiche persistenti da quest\'app nella schermata di blocco</string>
+  <string name="app_notification_show_on_keyguard_title">Mostra nel blocco schermo</string>
+  <string name="app_notification_show_on_keyguard_summary">Mostra notifiche di quest\'app nel blocco schermo</string>
+  <string name="app_notification_no_ongoing_on_keyguard_title">Disabilita la notifica persistente nel blocco schermo</string>
+  <string name="app_notification_no_ongoing_on_keyguard_summary">Non mostrare mai notifiche persistenti da quest\'app nel blocco schermo</string>
+  <!-- Notification sound timeout -->
+  <string name="app_notification_sound_timeout_title">Tempo minimo tra suoni di notifica</string>
+  <string name="app_notification_sound_timeout_summary_template">Consenti suoni o vibrazioni non più di una volta ogni <xliff:g id="duration">%1$s</xliff:g></string>
+  <string name="app_notification_sound_timeout_value_none">Nessuna restrizione</string>
+  <string name="app_notification_sound_timeout_value_10_seconds">10 secondi</string>
+  <string name="app_notification_sound_timeout_value_30_seconds">30 secondi</string>
+  <string name="app_notification_sound_timeout_value_1_minute">1 minuto</string>
+  <string name="app_notification_sound_timeout_value_5_minutes">5 minuti</string>
+  <string name="app_notification_sound_timeout_value_15_minutes">10 minuti</string>
+  <string name="app_notification_sound_timeout_value_30_minutes">30 minuti</string>
   <!-- CmRadioInfo -->
   <string name="cm_radio_info_label">Controlli radio avanzati</string>
   <!-- Radio Control (IMS/MBN etc.) -->
